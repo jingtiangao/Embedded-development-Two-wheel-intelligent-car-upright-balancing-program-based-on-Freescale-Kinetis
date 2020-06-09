@@ -1,0 +1,216 @@
+Motorola Hawk2 Assembler  Version 6.3.77 spec 1.0.3   11-12-11  17:45:39  
+D:\FreeScale\Test\8013\SmartCar\TestErectCar\startup\56F80xx_init.asm  Page 1
+
+
+
+1      
+2                              ; -----------------------------------------------
+--------
+3                              ;
+4                              ;       56F80xx_init.asm
+5                              ;
+6                              ;       Metrowerks, a Freescale Company
+7                              ;       sample code
+8                              ;
+9                              ;       description:  main entry point to C code.
+10                             ;                 setup runtime for C and call ma
+in
+11                             ;
+12                             ; -----------------------------------------------
+--------
+13     
+14                             ;===============================
+15     
+16                             ; OMR mode bits
+17     
+18                             ;===============================
+19     
+20        8000                 NL_MODE   EQU     $8000
+21        0100                 CM_MODE   EQU     $0100
+22        0080                 XP_MODE   EQU     $0080
+23        0020                 R_MODE    EQU     $0020
+24        0010                 SA_MODE   EQU     $0010
+25     
+26                             ;===============================
+27     
+28                             ; init
+29     
+30                             ;===============================
+31     
+32                                       section startup
+33     
+34                                       XREF    F_stack_addr
+35                                       XREF    F_xROM_to_xRAM
+36                                       XREF    F_pROM_to_xRAM
+37                                       XREF    F_Ldata_size
+38                                       XREF    F_Ldata_ROM_addr
+39                                       XREF    F_Ldata_RAM_addr
+40        P:00000000                     org     p:
+41     
+42     
+43                                       GLOBAL  Finit_56800_
+44     
+45                                       SUBROUTINE "Finit_56800_",Finit_56800_,
+Finit_56800_END-Finit_56800_
+46     
+47                             Finit_56800_:
+48     
+49                             ;
+50                             ; setup the OMr with the values required by C
+51                             ;
+52        P:00000000 835C                bfset   #NL_MODE,omr                   
+   ; ensure NL=1  (enables nsted DO loops)
+                     8000
+53        P:00000002 E700                nop
+54        P:00000003 E700                nop
+55        P:00000004 815C                bfclr   #(CM_MODE|XP_MODE|R_MODE|SA_MOD
+Motorola Hawk2 Assembler  Version 6.3.77 spec 1.0.3   11-12-11  17:45:39  
+D:\FreeScale\Test\8013\SmartCar\TestErectCar\startup\56F80xx_init.asm  Page 2
+
+
+
+E),omr ; ensure CM=0  (optional for C)
+                     01B0
+56                                                                              
+   ; ensure XP=0 to enable harvard architecture
+57                                                                              
+   ; ensure R=0  (required for C)
+58                                                                              
+   ; ensure SA=0 (required for C)
+59     
+60     
+61                             ; setup the m01 register for linear addressing
+62     
+63        P:00000006 E4FF                move.w  #-1,x0
+64        P:00000007 8A84                moveu.w x0,m01                         
+   ; set the m register to linear addressing
+65     
+66        P:00000008 8F9B                moveu.w hws,la                         
+   ; clear the hardware stack
+67        P:00000009 8F9B                moveu.w hws,la
+68        P:0000000A E700                nop
+69        P:0000000B E700                nop
+70     
+71     
+72                             CALLMAIN:                                        
+   ; initialize compiler environment
+73     
+74                                                                              
+   ; initialize the Stack
+75        P:0000000C E418                move.l  #>>F_Lstack_addr,r0
+                     0000
+                     0000
+76        P:0000000F 8D48                bftsth  #$0001,r0
+                     0001
+77        P:00000011 A002                bcc     noinc
+                     E700
+78        P:00000013 8170                adda    #1,r0
+79                             noinc:
+80        P:00000014 812B                tfra    r0,sp                          
+   ; set stack pointer too
+81        P:00000015 E980                move.w  #0,r1
+82        P:00000016 E700                nop
+83        P:00000017 D91F                move.w  r1,x:(sp)                      
+   ; put zero at top of stack
+84        P:00000018 817B                adda    #1,sp                          
+   ; increment stack
+85        P:00000019 D91F                move.w  r1,x:(sp)                      
+   ; put another zero
+86     
+87     
+88                             ; Stationery default routine
+89                             ; 56800E LC register doesn't have 8191 element li
+mitation of 56800
+90                             ; so we can use hardware loop here
+91     
+92                             ; zeroBSS hardware loop utility
+93        P:0000001A E41A                move.l  #>>F_Xbss_length,r2            
+   ; move count
+                     0000
+                     0000
+94        P:0000001D E419                move.l  #>>F_Xbss_start_addr,r1        
+   ; start address is BSS start
+Motorola Hawk2 Assembler  Version 6.3.77 spec 1.0.3   11-12-11  17:45:39  
+D:\FreeScale\Test\8013\SmartCar\TestErectCar\startup\56F80xx_init.asm  Page 3
+
+
+
+                     0000
+                     0000
+95        P:00000020 E480                move.w  #0,x0                          
+   ; zero value
+96        P:00000021 E700                nop
+97        P:00000022 E030                do      r2,>>end_zeroBSS               
+   ; copy for r2 times
+                     EB0A
+                     0026
+98        P:00000025 E700                nop
+99        P:00000026 D401                move.w  x0,x:(r1)+                     
+   ; stash value at x address r1
+100                            end_zeroBSS:
+101    
+102    
+103    
+104                            ; pROM-to-xRAM utility
+105       P:00000027 E700                nop
+106       P:00000028 E880                move.w  #F_pROM_to_xRAM,r0             
+   ; check for the option
+107       P:00000029 8F08                tst.w   r0
+108       P:0000002A A313                beq     end_prom2xram                  
+   ; if no pROM-to-xRAM, then exit
+                     E700
+109       P:0000002C E700                nop
+110       P:0000002D E41A                move.l  #>>F_Ldata_size,r2             
+   ; set data size
+                     0000
+                     0000
+111       P:00000030 E41B                move.l  #>>F_Ldata_ROM_addr,r3         
+   ; src address -- pROM data start
+                     0000
+                     0000
+112       P:00000033 E419                move.l  #>>F_Ldata_RAM_addr,r1         
+   ; dest address -- xRAM data start
+                     0000
+                     0000
+113       P:00000036 E030                do      r2,>>end_prom2xram             
+   ; copy for r2 times
+                     EB0A
+                     003D
+114       P:00000039 846B                move.w  p:(r3)+,x0                     
+   ; fetch value at address r3
+115       P:0000003A E700                nop
+116       P:0000003B E700                nop
+117       P:0000003C E700                nop
+118       P:0000003D D401                move.w  x0,x:(r1)+                     
+   ; stash value at address r1
+119                            end_prom2xram:
+120    
+121    
+122                            ; call main()
+123    
+124       P:0000003E E580                move.w  #0,y0                          
+   ; pass parameters to main()
+125       P:0000003F EA80                move.w  #0,R2
+126       P:00000040 EB80                move.w  #0,R3
+127    
+128       P:00000041 E254                jsr     Fmain                          
+   ; call the user program
+                     0000
+Motorola Hawk2 Assembler  Version 6.3.77 spec 1.0.3   11-12-11  17:45:39  
+D:\FreeScale\Test\8013\SmartCar\TestErectCar\startup\56F80xx_init.asm  Page 4
+
+
+
+129    
+130                            loop_at_end_of_app:
+131       P:00000043 E701                debughlt
+132       P:00000044 A97E                bra     loop_at_end_of_app
+133    
+134                            Finit_56800_END:
+135    
+136                                      endsec
+
+0    Errors
+0    Warnings
+
+

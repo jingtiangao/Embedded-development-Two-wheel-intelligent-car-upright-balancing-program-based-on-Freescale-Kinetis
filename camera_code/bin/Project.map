@@ -1,0 +1,2556 @@
+*** EVALUATION ***
+PROGRAM "C:\Users\thinkpad\Desktop\ÌÎ¸ç³ÌÐò\bin\Project.abs"
+
+*********************************************************************************************
+TARGET SECTION
+---------------------------------------------------------------------------------------------
+Processor   : Freescale HC12
+Memory Model: BANKED
+File Format : ELF\DWARF 2.0
+Linker      : SmartLinker V-5.0.40 Build 10203, Jul 23 2010
+
+*********************************************************************************************
+FILE SECTION
+---------------------------------------------------------------------------------------------
+MC9S12XS128.c.o                         Model: BANKED,        Lang: ANSI-C
+main.c.o                                Model: BANKED,        Lang: ANSI-C
+Start12.c.o                             Model: BANKED,        Lang: ANSI-C
+rtshc12.c.o (ansixbi.lib)               Model: BANKED,        Lang: ANSI-C
+Init.c.o                                Model: BANKED,        Lang: ANSI-C
+nRF24L01.c.o                            Model: BANKED,        Lang: ANSI-C
+
+*********************************************************************************************
+STARTUP SECTION
+---------------------------------------------------------------------------------------------
+Entry point: 0xC000 (_Startup)
+_startupData is allocated at 0xC00F and uses 6 Bytes
+extern struct _tagStartup {
+  unsigned nofZeroOut     1
+  _Range   pZeroOut       0x2100     1354
+  _Copy    *toCopyDownBeg 0xC2F1
+} _startupData;
+
+*********************************************************************************************
+SECTION-ALLOCATION SECTION
+Section Name                    Size  Type     From       To       Segment
+---------------------------------------------------------------------------------------------
+.init                             15     R     0xC000     0xC00E   ROM_C000
+.startData                        10     R     0xC00F     0xC018   ROM_C000
+NON_BANKED                       728     R     0xC019     0xC2F0   ROM_C000
+.copy                            155     R     0xC2F1     0xC38B   ROM_C000
+.text                          11281     R   0xFE8000   0xFEAC10   PAGE_FE
+.stack                           256   R/W     0x2000     0x20FF   RAM
+.data                            150   R/W     0x2100     0x2195   RAM
+.abs_section_8                     1   N/I        0x8        0x8   .absSeg0
+.abs_section_9                     1   N/I        0x9        0x9   .absSeg1
+.abs_section_b                     1   N/I        0xB        0xB   .absSeg2
+.abs_section_c                     1   N/I        0xC        0xC   .absSeg3
+.abs_section_d                     1   N/I        0xD        0xD   .absSeg4
+.abs_section_10                    1   N/I       0x10       0x10   .absSeg5
+.abs_section_11                    1   N/I       0x11       0x11   .absSeg6
+.abs_section_13                    1   N/I       0x13       0x13   .absSeg7
+.abs_section_15                    1   N/I       0x15       0x15   .absSeg8
+.abs_section_16                    1   N/I       0x16       0x16   .absSeg9
+.abs_section_17                    1   N/I       0x17       0x17   .absSeg10
+.abs_section_1c                    1   N/I       0x1C       0x1C   .absSeg11
+.abs_section_1e                    1   N/I       0x1E       0x1E   .absSeg12
+.abs_section_20                    1   N/I       0x20       0x20   .absSeg13
+.abs_section_21                    1   N/I       0x21       0x21   .absSeg14
+.abs_section_22                    1   N/I       0x22       0x22   .absSeg15
+.abs_section_23                    1   N/I       0x23       0x23   .absSeg16
+.abs_section_26                    1   N/I       0x26       0x26   .absSeg17
+.abs_section_27                    1   N/I       0x27       0x27   .absSeg18
+.abs_section_28                    1   N/I       0x28       0x28   .absSeg19
+.abs_section_29                    1   N/I       0x29       0x29   .absSeg20
+.abs_section_2a                    1   N/I       0x2A       0x2A   .absSeg21
+.abs_section_2b                    1   N/I       0x2B       0x2B   .absSeg22
+.abs_section_2c                    1   N/I       0x2C       0x2C   .absSeg23
+.abs_section_2d                    1   N/I       0x2D       0x2D   .absSeg24
+.abs_section_2e                    1   N/I       0x2E       0x2E   .absSeg25
+.abs_section_2f                    1   N/I       0x2F       0x2F   .absSeg26
+.abs_section_32                    1   N/I       0x32       0x32   .absSeg27
+.abs_section_33                    1   N/I       0x33       0x33   .absSeg28
+.abs_section_34                    1   N/I       0x34       0x34   .absSeg29
+.abs_section_35                    1   N/I       0x35       0x35   .absSeg30
+.abs_section_36                    1   N/I       0x36       0x36   .absSeg31
+.abs_section_37                    1   N/I       0x37       0x37   .absSeg32
+.abs_section_38                    1   N/I       0x38       0x38   .absSeg33
+.abs_section_39                    1   N/I       0x39       0x39   .absSeg34
+.abs_section_3a                    1   N/I       0x3A       0x3A   .absSeg35
+.abs_section_3b                    1   N/I       0x3B       0x3B   .absSeg36
+.abs_section_3c                    1   N/I       0x3C       0x3C   .absSeg37
+.abs_section_3f                    1   N/I       0x3F       0x3F   .absSeg38
+.abs_section_40                    1   N/I       0x40       0x40   .absSeg39
+.abs_section_41                    1   N/I       0x41       0x41   .absSeg40
+.abs_section_42                    1   N/I       0x42       0x42   .absSeg41
+.abs_section_43                    1   N/I       0x43       0x43   .absSeg42
+.abs_section_46                    1   N/I       0x46       0x46   .absSeg43
+.abs_section_47                    1   N/I       0x47       0x47   .absSeg44
+.abs_section_48                    1   N/I       0x48       0x48   .absSeg45
+.abs_section_49                    1   N/I       0x49       0x49   .absSeg46
+.abs_section_4a                    1   N/I       0x4A       0x4A   .absSeg47
+.abs_section_4b                    1   N/I       0x4B       0x4B   .absSeg48
+.abs_section_4c                    1   N/I       0x4C       0x4C   .absSeg49
+.abs_section_4d                    1   N/I       0x4D       0x4D   .absSeg50
+.abs_section_4e                    1   N/I       0x4E       0x4E   .absSeg51
+.abs_section_4f                    1   N/I       0x4F       0x4F   .absSeg52
+.abs_section_60                    1   N/I       0x60       0x60   .absSeg53
+.abs_section_61                    1   N/I       0x61       0x61   .absSeg54
+.abs_section_6c                    1   N/I       0x6C       0x6C   .absSeg55
+.abs_section_6e                    1   N/I       0x6E       0x6E   .absSeg56
+.abs_section_ca                    1   N/I       0xCA       0xCA   .absSeg57
+.abs_section_cb                    1   N/I       0xCB       0xCB   .absSeg58
+.abs_section_cc                    1   N/I       0xCC       0xCC   .absSeg59
+.abs_section_cd                    1   N/I       0xCD       0xCD   .absSeg60
+.abs_section_ce                    1   N/I       0xCE       0xCE   .absSeg61
+.abs_section_cf                    1   N/I       0xCF       0xCF   .absSeg62
+.abs_section_d2                    1   N/I       0xD2       0xD2   .absSeg63
+.abs_section_d3                    1   N/I       0xD3       0xD3   .absSeg64
+.abs_section_d4                    1   N/I       0xD4       0xD4   .absSeg65
+.abs_section_d5                    1   N/I       0xD5       0xD5   .absSeg66
+.abs_section_d6                    1   N/I       0xD6       0xD6   .absSeg67
+.abs_section_d7                    1   N/I       0xD7       0xD7   .absSeg68
+.abs_section_d8                    1   N/I       0xD8       0xD8   .absSeg69
+.abs_section_d9                    1   N/I       0xD9       0xD9   .absSeg70
+.abs_section_da                    1   N/I       0xDA       0xDA   .absSeg71
+.abs_section_db                    1   N/I       0xDB       0xDB   .absSeg72
+.abs_section_100                   1   N/I      0x100      0x100   .absSeg73
+.abs_section_101                   1   N/I      0x101      0x101   .absSeg74
+.abs_section_102                   1   N/I      0x102      0x102   .absSeg75
+.abs_section_103                   1   N/I      0x103      0x103   .absSeg76
+.abs_section_104                   1   N/I      0x104      0x104   .absSeg77
+.abs_section_105                   1   N/I      0x105      0x105   .absSeg78
+.abs_section_106                   1   N/I      0x106      0x106   .absSeg79
+.abs_section_107                   1   N/I      0x107      0x107   .absSeg80
+.abs_section_108                   1   N/I      0x108      0x108   .absSeg81
+.abs_section_109                   1   N/I      0x109      0x109   .absSeg82
+.abs_section_110                   1   N/I      0x110      0x110   .absSeg83
+.abs_section_121                   1   N/I      0x121      0x121   .absSeg84
+.abs_section_126                   1   N/I      0x126      0x126   .absSeg85
+.abs_section_127                   1   N/I      0x127      0x127   .absSeg86
+.abs_section_128                   1   N/I      0x128      0x128   .absSeg87
+.abs_section_129                   1   N/I      0x129      0x129   .absSeg88
+.abs_section_12a                   1   N/I      0x12A      0x12A   .absSeg89
+.abs_section_12b                   1   N/I      0x12B      0x12B   .absSeg90
+.abs_section_12c                   1   N/I      0x12C      0x12C   .absSeg91
+.abs_section_12d                   1   N/I      0x12D      0x12D   .absSeg92
+.abs_section_12e                   1   N/I      0x12E      0x12E   .absSeg93
+.abs_section_12f                   1   N/I      0x12F      0x12F   .absSeg94
+.abs_section_140                   1   N/I      0x140      0x140   .absSeg95
+.abs_section_141                   1   N/I      0x141      0x141   .absSeg96
+.abs_section_142                   1   N/I      0x142      0x142   .absSeg97
+.abs_section_143                   1   N/I      0x143      0x143   .absSeg98
+.abs_section_144                   1   N/I      0x144      0x144   .absSeg99
+.abs_section_145                   1   N/I      0x145      0x145   .absSeg100
+.abs_section_146                   1   N/I      0x146      0x146   .absSeg101
+.abs_section_147                   1   N/I      0x147      0x147   .absSeg102
+.abs_section_148                   1   N/I      0x148      0x148   .absSeg103
+.abs_section_149                   1   N/I      0x149      0x149   .absSeg104
+.abs_section_14a                   1   N/I      0x14A      0x14A   .absSeg105
+.abs_section_14b                   1   N/I      0x14B      0x14B   .absSeg106
+.abs_section_14d                   1   N/I      0x14D      0x14D   .absSeg107
+.abs_section_14e                   1   N/I      0x14E      0x14E   .absSeg108
+.abs_section_14f                   1   N/I      0x14F      0x14F   .absSeg109
+.abs_section_150                   1   N/I      0x150      0x150   .absSeg110
+.abs_section_151                   1   N/I      0x151      0x151   .absSeg111
+.abs_section_152                   1   N/I      0x152      0x152   .absSeg112
+.abs_section_153                   1   N/I      0x153      0x153   .absSeg113
+.abs_section_154                   1   N/I      0x154      0x154   .absSeg114
+.abs_section_155                   1   N/I      0x155      0x155   .absSeg115
+.abs_section_156                   1   N/I      0x156      0x156   .absSeg116
+.abs_section_157                   1   N/I      0x157      0x157   .absSeg117
+.abs_section_158                   1   N/I      0x158      0x158   .absSeg118
+.abs_section_159                   1   N/I      0x159      0x159   .absSeg119
+.abs_section_15a                   1   N/I      0x15A      0x15A   .absSeg120
+.abs_section_15b                   1   N/I      0x15B      0x15B   .absSeg121
+.abs_section_15c                   1   N/I      0x15C      0x15C   .absSeg122
+.abs_section_15d                   1   N/I      0x15D      0x15D   .absSeg123
+.abs_section_15e                   1   N/I      0x15E      0x15E   .absSeg124
+.abs_section_15f                   1   N/I      0x15F      0x15F   .absSeg125
+.abs_section_160                   1   N/I      0x160      0x160   .absSeg126
+.abs_section_161                   1   N/I      0x161      0x161   .absSeg127
+.abs_section_162                   1   N/I      0x162      0x162   .absSeg128
+.abs_section_163                   1   N/I      0x163      0x163   .absSeg129
+.abs_section_164                   1   N/I      0x164      0x164   .absSeg130
+.abs_section_165                   1   N/I      0x165      0x165   .absSeg131
+.abs_section_166                   1   N/I      0x166      0x166   .absSeg132
+.abs_section_167                   1   N/I      0x167      0x167   .absSeg133
+.abs_section_168                   1   N/I      0x168      0x168   .absSeg134
+.abs_section_169                   1   N/I      0x169      0x169   .absSeg135
+.abs_section_16a                   1   N/I      0x16A      0x16A   .absSeg136
+.abs_section_16b                   1   N/I      0x16B      0x16B   .absSeg137
+.abs_section_16c                   1   N/I      0x16C      0x16C   .absSeg138
+.abs_section_170                   1   N/I      0x170      0x170   .absSeg139
+.abs_section_171                   1   N/I      0x171      0x171   .absSeg140
+.abs_section_172                   1   N/I      0x172      0x172   .absSeg141
+.abs_section_173                   1   N/I      0x173      0x173   .absSeg142
+.abs_section_174                   1   N/I      0x174      0x174   .absSeg143
+.abs_section_175                   1   N/I      0x175      0x175   .absSeg144
+.abs_section_176                   1   N/I      0x176      0x176   .absSeg145
+.abs_section_177                   1   N/I      0x177      0x177   .absSeg146
+.abs_section_178                   1   N/I      0x178      0x178   .absSeg147
+.abs_section_179                   1   N/I      0x179      0x179   .absSeg148
+.abs_section_17a                   1   N/I      0x17A      0x17A   .absSeg149
+.abs_section_17b                   1   N/I      0x17B      0x17B   .absSeg150
+.abs_section_17c                   1   N/I      0x17C      0x17C   .absSeg151
+.abs_section_17d                   1   N/I      0x17D      0x17D   .absSeg152
+.abs_section_240                   1   N/I      0x240      0x240   .absSeg153
+.abs_section_241                   1   N/I      0x241      0x241   .absSeg154
+.abs_section_242                   1   N/I      0x242      0x242   .absSeg155
+.abs_section_243                   1   N/I      0x243      0x243   .absSeg156
+.abs_section_244                   1   N/I      0x244      0x244   .absSeg157
+.abs_section_245                   1   N/I      0x245      0x245   .absSeg158
+.abs_section_247                   1   N/I      0x247      0x247   .absSeg159
+.abs_section_248                   1   N/I      0x248      0x248   .absSeg160
+.abs_section_249                   1   N/I      0x249      0x249   .absSeg161
+.abs_section_24a                   1   N/I      0x24A      0x24A   .absSeg162
+.abs_section_24b                   1   N/I      0x24B      0x24B   .absSeg163
+.abs_section_24c                   1   N/I      0x24C      0x24C   .absSeg164
+.abs_section_24d                   1   N/I      0x24D      0x24D   .absSeg165
+.abs_section_24e                   1   N/I      0x24E      0x24E   .absSeg166
+.abs_section_250                   1   N/I      0x250      0x250   .absSeg167
+.abs_section_251                   1   N/I      0x251      0x251   .absSeg168
+.abs_section_252                   1   N/I      0x252      0x252   .absSeg169
+.abs_section_253                   1   N/I      0x253      0x253   .absSeg170
+.abs_section_254                   1   N/I      0x254      0x254   .absSeg171
+.abs_section_255                   1   N/I      0x255      0x255   .absSeg172
+.abs_section_256                   1   N/I      0x256      0x256   .absSeg173
+.abs_section_257                   1   N/I      0x257      0x257   .absSeg174
+.abs_section_258                   1   N/I      0x258      0x258   .absSeg175
+.abs_section_259                   1   N/I      0x259      0x259   .absSeg176
+.abs_section_25a                   1   N/I      0x25A      0x25A   .absSeg177
+.abs_section_25b                   1   N/I      0x25B      0x25B   .absSeg178
+.abs_section_25c                   1   N/I      0x25C      0x25C   .absSeg179
+.abs_section_25d                   1   N/I      0x25D      0x25D   .absSeg180
+.abs_section_25e                   1   N/I      0x25E      0x25E   .absSeg181
+.abs_section_25f                   1   N/I      0x25F      0x25F   .absSeg182
+.abs_section_260                   1   N/I      0x260      0x260   .absSeg183
+.abs_section_261                   1   N/I      0x261      0x261   .absSeg184
+.abs_section_262                   1   N/I      0x262      0x262   .absSeg185
+.abs_section_263                   1   N/I      0x263      0x263   .absSeg186
+.abs_section_264                   1   N/I      0x264      0x264   .absSeg187
+.abs_section_265                   1   N/I      0x265      0x265   .absSeg188
+.abs_section_266                   1   N/I      0x266      0x266   .absSeg189
+.abs_section_267                   1   N/I      0x267      0x267   .absSeg190
+.abs_section_268                   1   N/I      0x268      0x268   .absSeg191
+.abs_section_269                   1   N/I      0x269      0x269   .absSeg192
+.abs_section_26a                   1   N/I      0x26A      0x26A   .absSeg193
+.abs_section_26b                   1   N/I      0x26B      0x26B   .absSeg194
+.abs_section_26c                   1   N/I      0x26C      0x26C   .absSeg195
+.abs_section_26d                   1   N/I      0x26D      0x26D   .absSeg196
+.abs_section_26e                   1   N/I      0x26E      0x26E   .absSeg197
+.abs_section_26f                   1   N/I      0x26F      0x26F   .absSeg198
+.abs_section_2c6                   1   N/I      0x2C6      0x2C6   .absSeg199
+.abs_section_2f0                   1   N/I      0x2F0      0x2F0   .absSeg200
+.abs_section_2f1                   1   N/I      0x2F1      0x2F1   .absSeg201
+.abs_section_2f2                   1   N/I      0x2F2      0x2F2   .absSeg202
+.abs_section_2f3                   1   N/I      0x2F3      0x2F3   .absSeg203
+.abs_section_2f7                   1   N/I      0x2F7      0x2F7   .absSeg204
+.abs_section_300                   1   N/I      0x300      0x300   .absSeg205
+.abs_section_301                   1   N/I      0x301      0x301   .absSeg206
+.abs_section_302                   1   N/I      0x302      0x302   .absSeg207
+.abs_section_303                   1   N/I      0x303      0x303   .absSeg208
+.abs_section_304                   1   N/I      0x304      0x304   .absSeg209
+.abs_section_305                   1   N/I      0x305      0x305   .absSeg210
+.abs_section_308                   1   N/I      0x308      0x308   .absSeg211
+.abs_section_309                   1   N/I      0x309      0x309   .absSeg212
+.abs_section_324                   1   N/I      0x324      0x324   .absSeg213
+.abs_section_340                   1   N/I      0x340      0x340   .absSeg214
+.abs_section_341                   1   N/I      0x341      0x341   .absSeg215
+.abs_section_342                   1   N/I      0x342      0x342   .absSeg216
+.abs_section_343                   1   N/I      0x343      0x343   .absSeg217
+.abs_section_344                   1   N/I      0x344      0x344   .absSeg218
+.abs_section_345                   1   N/I      0x345      0x345   .absSeg219
+.abs_section_346                   1   N/I      0x346      0x346   .absSeg220
+.abs_section_347                   1   N/I      0x347      0x347   .absSeg221
+.abs_section_0                     2   N/I        0x0        0x1   .absSeg222
+.abs_section_2                     2   N/I        0x2        0x3   .absSeg223
+.abs_section_1a                    2   N/I       0x1A       0x1B   .absSeg224
+.abs_section_24                    2   N/I       0x24       0x25   .absSeg225
+.abs_section_44                    2   N/I       0x44       0x45   .absSeg226
+.abs_section_50                    2   N/I       0x50       0x51   .absSeg227
+.abs_section_52                    2   N/I       0x52       0x53   .absSeg228
+.abs_section_54                    2   N/I       0x54       0x55   .absSeg229
+.abs_section_56                    2   N/I       0x56       0x57   .absSeg230
+.abs_section_58                    2   N/I       0x58       0x59   .absSeg231
+.abs_section_5a                    2   N/I       0x5A       0x5B   .absSeg232
+.abs_section_5c                    2   N/I       0x5C       0x5D   .absSeg233
+.abs_section_5e                    2   N/I       0x5E       0x5F   .absSeg234
+.abs_section_62                    2   N/I       0x62       0x63   .absSeg235
+.abs_section_c8                    2   N/I       0xC8       0xC9   .absSeg236
+.abs_section_d0                    2   N/I       0xD0       0xD1   .absSeg237
+.abs_section_dc                    2   N/I       0xDC       0xDD   .absSeg238
+.abs_section_10a                   2   N/I      0x10A      0x10B   .absSeg239
+.abs_section_10e                   2   N/I      0x10E      0x10F   .absSeg240
+.abs_section_16e                   2   N/I      0x16E      0x16F   .absSeg241
+.abs_section_17e                   2   N/I      0x17E      0x17F   .absSeg242
+.abs_section_270                   2   N/I      0x270      0x271   .absSeg243
+.abs_section_272                   2   N/I      0x272      0x273   .absSeg244
+.abs_section_274                   2   N/I      0x274      0x275   .absSeg245
+.abs_section_276                   2   N/I      0x276      0x277   .absSeg246
+.abs_section_2c0                   2   N/I      0x2C0      0x2C1   .absSeg247
+.abs_section_2c2                   2   N/I      0x2C2      0x2C3   .absSeg248
+.abs_section_2c4                   2   N/I      0x2C4      0x2C5   .absSeg249
+.abs_section_2c8                   2   N/I      0x2C8      0x2C9   .absSeg250
+.abs_section_2ca                   2   N/I      0x2CA      0x2CB   .absSeg251
+.abs_section_2cc                   2   N/I      0x2CC      0x2CD   .absSeg252
+.abs_section_2ce                   2   N/I      0x2CE      0x2CF   .absSeg253
+.abs_section_2d0                   2   N/I      0x2D0      0x2D1   .absSeg254
+.abs_section_2d2                   2   N/I      0x2D2      0x2D3   .absSeg255
+.abs_section_2d4                   2   N/I      0x2D4      0x2D5   .absSeg256
+.abs_section_2d6                   2   N/I      0x2D6      0x2D7   .absSeg257
+.abs_section_2d8                   2   N/I      0x2D8      0x2D9   .absSeg258
+.abs_section_2da                   2   N/I      0x2DA      0x2DB   .absSeg259
+.abs_section_2dc                   2   N/I      0x2DC      0x2DD   .absSeg260
+.abs_section_2de                   2   N/I      0x2DE      0x2DF   .absSeg261
+.abs_section_2e0                   2   N/I      0x2E0      0x2E1   .absSeg262
+.abs_section_2e2                   2   N/I      0x2E2      0x2E3   .absSeg263
+.abs_section_2e4                   2   N/I      0x2E4      0x2E5   .absSeg264
+.abs_section_2e6                   2   N/I      0x2E6      0x2E7   .absSeg265
+.abs_section_2e8                   2   N/I      0x2E8      0x2E9   .absSeg266
+.abs_section_2ea                   2   N/I      0x2EA      0x2EB   .absSeg267
+.abs_section_2ec                   2   N/I      0x2EC      0x2ED   .absSeg268
+.abs_section_2ee                   2   N/I      0x2EE      0x2EF   .absSeg269
+.abs_section_2f4                   2   N/I      0x2F4      0x2F5   .absSeg270
+.abs_section_30c                   2   N/I      0x30C      0x30D   .absSeg271
+.abs_section_30e                   2   N/I      0x30E      0x30F   .absSeg272
+.abs_section_310                   2   N/I      0x310      0x311   .absSeg273
+.abs_section_312                   2   N/I      0x312      0x313   .absSeg274
+.abs_section_314                   2   N/I      0x314      0x315   .absSeg275
+.abs_section_316                   2   N/I      0x316      0x317   .absSeg276
+.abs_section_318                   2   N/I      0x318      0x319   .absSeg277
+.abs_section_31a                   2   N/I      0x31A      0x31B   .absSeg278
+.abs_section_31c                   2   N/I      0x31C      0x31D   .absSeg279
+.abs_section_31e                   2   N/I      0x31E      0x31F   .absSeg280
+.abs_section_320                   2   N/I      0x320      0x321   .absSeg281
+.abs_section_322                   2   N/I      0x322      0x323   .absSeg282
+.abs_section_348                   2   N/I      0x348      0x349   .absSeg283
+.abs_section_34a                   2   N/I      0x34A      0x34B   .absSeg284
+.abs_section_34c                   2   N/I      0x34C      0x34D   .absSeg285
+.abs_section_34e                   2   N/I      0x34E      0x34F   .absSeg286
+.abs_section_350                   2   N/I      0x350      0x351   .absSeg287
+.abs_section_352                   2   N/I      0x352      0x353   .absSeg288
+.abs_section_354                   2   N/I      0x354      0x355   .absSeg289
+.abs_section_356                   2   N/I      0x356      0x357   .absSeg290
+.abs_section_ffee                  2     R     0xFFEE     0xFFEF   .absSeg291
+.abs_section_ffec                  2     R     0xFFEC     0xFFED   .absSeg292
+.abs_section_ffea                  2     R     0xFFEA     0xFFEB   .absSeg293
+.abs_section_ffe8                  2     R     0xFFE8     0xFFE9   .absSeg294
+.abs_section_ffe6                  2     R     0xFFE6     0xFFE7   .absSeg295
+.abs_section_ff7a                  2     R     0xFF7A     0xFF7B   .absSeg296
+.abs_section_fff2                  2     R     0xFFF2     0xFFF3   .absSeg297
+.bss                               7   R/W     0x2196     0x219C   RAM
+.common                         1197   R/W     0x219D     0x2649   RAM
+.vectSeg298_vect                   2     R     0xFFFE     0xFFFF   .vectSeg298
+
+Summary of section sizes per section type:
+READ_ONLY (R):        2FAD (dec:    12205)
+READ_WRITE (R/W):      64A (dec:     1610)
+NO_INIT (N/I):         168 (dec:      360)
+
+*********************************************************************************************
+VECTOR-ALLOCATION SECTION
+    Address     InitValue   InitFunction
+---------------------------------------------------------------------------------------------
+     0xFFFE        0xC000   _Startup
+
+*********************************************************************************************
+OBJECT-ALLOCATION SECTION
+     Name               Module                 Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+MODULE:                 -- MC9S12XS128.c.o --
+- PROCEDURES:
+- VARIABLES:
+     _PORTE                                       8       1       1       0   .abs_section_8
+     _DDRE                                        9       1       1       0   .abs_section_9
+     _MODE                                        B       1       1       0   .abs_section_b
+     _PUCR                                        C       1       1       0   .abs_section_c
+     _RDRIV                                       D       1       1       0   .abs_section_d
+     _GPAGE                                      10       1       1       0   .abs_section_10
+     _DIRECT                                     11       1       1       0   .abs_section_11
+     _MMCCTL1                                    13       1       1       0   .abs_section_13
+     _PPAGE                                      15       1       1       0   .abs_section_15
+     _RPAGE                                      16       1       1       0   .abs_section_16
+     _EPAGE                                      17       1       1       0   .abs_section_17
+     _ECLKCTL                                    1C       1       1       0   .abs_section_1c
+     _IRQCR                                      1E       1       1       1   .abs_section_1e
+     _DBGC1                                      20       1       1       0   .abs_section_20
+     _DBGSR                                      21       1       1       0   .abs_section_21
+     _DBGTCR                                     22       1       1       0   .abs_section_22
+     _DBGC2                                      23       1       1       0   .abs_section_23
+     _DBGCNT                                     26       1       1       0   .abs_section_26
+     _DBGSCRX                                    27       1       1       0   .abs_section_27
+     _DBGXCTL                                    28       1       1       0   .abs_section_28
+     _DBGXAH                                     29       1       1       0   .abs_section_29
+     _DBGXAM                                     2A       1       1       0   .abs_section_2a
+     _DBGXAL                                     2B       1       1       0   .abs_section_2b
+     _DBGXDH                                     2C       1       1       0   .abs_section_2c
+     _DBGXDL                                     2D       1       1       0   .abs_section_2d
+     _DBGXDHM                                    2E       1       1       0   .abs_section_2e
+     _DBGXDLM                                    2F       1       1       0   .abs_section_2f
+     _PORTK                                      32       1       1       0   .abs_section_32
+     _DDRK                                       33       1       1       0   .abs_section_33
+     _SYNR                                       34       1       1       1   .abs_section_34
+     _REFDV                                      35       1       1       1   .abs_section_35
+     _POSTDIV                                    36       1       1       1   .abs_section_36
+     _CRGFLG                                     37       1       1       1   .abs_section_37
+     _CRGINT                                     38       1       1       0   .abs_section_38
+     _CLKSEL                                     39       1       1       2   .abs_section_39
+     _PLLCTL                                     3A       1       1       1   .abs_section_3a
+     _RTICTL                                     3B       1       1       0   .abs_section_3b
+     _COPCTL                                     3C       1       1       0   .abs_section_3c
+     _ARMCOP                                     3F       1       1       0   .abs_section_3f
+     _TIOS                                       40       1       1       1   .abs_section_40
+     _CFORC                                      41       1       1       0   .abs_section_41
+     _OC7M                                       42       1       1       0   .abs_section_42
+     _OC7D                                       43       1       1       0   .abs_section_43
+     _TSCR1                                      46       1       1       1   .abs_section_46
+     _TTOV                                       47       1       1       0   .abs_section_47
+     _TCTL1                                      48       1       1       0   .abs_section_48
+     _TCTL2                                      49       1       1       0   .abs_section_49
+     _TCTL3                                      4A       1       1       2   .abs_section_4a
+     _TCTL4                                      4B       1       1       6   .abs_section_4b
+     _TIE                                        4C       1       1      10   .abs_section_4c
+     _TSCR2                                      4D       1       1       1   .abs_section_4d
+     _TFLG1                                      4E       1       1       7   .abs_section_4e
+     _TFLG2                                      4F       1       1       0   .abs_section_4f
+     _PACTL                                      60       1       1       1   .abs_section_60
+     _PAFLG                                      61       1       1       0   .abs_section_61
+     _OCPD                                       6C       1       1       0   .abs_section_6c
+     _PTPSR                                      6E       1       1       0   .abs_section_6e
+     _SCI0ACR2                                   CA       1       1       0   .abs_section_ca
+     _SCI0CR2                                    CB       1       1       0   .abs_section_cb
+     _SCI0SR1                                    CC       1       1       0   .abs_section_cc
+     _SCI0SR2                                    CD       1       1       0   .abs_section_cd
+     _SCI0DRH                                    CE       1       1       0   .abs_section_ce
+     _SCI0DRL                                    CF       1       1       0   .abs_section_cf
+     _SCI1ACR2                                   D2       1       1       0   .abs_section_d2
+     _SCI1CR2                                    D3       1       1       0   .abs_section_d3
+     _SCI1SR1                                    D4       1       1       0   .abs_section_d4
+     _SCI1SR2                                    D5       1       1       0   .abs_section_d5
+     _SCI1DRH                                    D6       1       1       0   .abs_section_d6
+     _SCI1DRL                                    D7       1       1       0   .abs_section_d7
+     _SPI0CR1                                    D8       1       1       0   .abs_section_d8
+     _SPI0CR2                                    D9       1       1       0   .abs_section_d9
+     _SPI0BR                                     DA       1       1       0   .abs_section_da
+     _SPI0SR                                     DB       1       1       2   .abs_section_db
+     _FCLKDIV                                   100       1       1       0   .abs_section_100
+     _FSEC                                      101       1       1       0   .abs_section_101
+     _FCCOBIX                                   102       1       1       0   .abs_section_102
+     _FECCRIX                                   103       1       1       0   .abs_section_103
+     _FCNFG                                     104       1       1       0   .abs_section_104
+     _FERCNFG                                   105       1       1       0   .abs_section_105
+     _FSTAT                                     106       1       1       0   .abs_section_106
+     _FERSTAT                                   107       1       1       0   .abs_section_107
+     _FPROT                                     108       1       1       0   .abs_section_108
+     _DFPROT                                    109       1       1       0   .abs_section_109
+     _FOPT                                      110       1       1       0   .abs_section_110
+     _IVBR                                      121       1       1       0   .abs_section_121
+     _INT_XGPRIO                                126       1       1       0   .abs_section_126
+     _INT_CFADDR                                127       1       1       0   .abs_section_127
+     _INT_CFDATA0                               128       1       1       0   .abs_section_128
+     _INT_CFDATA1                               129       1       1       0   .abs_section_129
+     _INT_CFDATA2                               12A       1       1       0   .abs_section_12a
+     _INT_CFDATA3                               12B       1       1       0   .abs_section_12b
+     _INT_CFDATA4                               12C       1       1       0   .abs_section_12c
+     _INT_CFDATA5                               12D       1       1       0   .abs_section_12d
+     _INT_CFDATA6                               12E       1       1       0   .abs_section_12e
+     _INT_CFDATA7                               12F       1       1       0   .abs_section_12f
+     _CAN0CTL0                                  140       1       1       0   .abs_section_140
+     _CAN0CTL1                                  141       1       1       0   .abs_section_141
+     _CAN0BTR0                                  142       1       1       0   .abs_section_142
+     _CAN0BTR1                                  143       1       1       0   .abs_section_143
+     _CAN0RFLG                                  144       1       1       0   .abs_section_144
+     _CAN0RIER                                  145       1       1       0   .abs_section_145
+     _CAN0TFLG                                  146       1       1       0   .abs_section_146
+     _CAN0TIER                                  147       1       1       0   .abs_section_147
+     _CAN0TARQ                                  148       1       1       0   .abs_section_148
+     _CAN0TAAK                                  149       1       1       0   .abs_section_149
+     _CAN0TBSEL                                 14A       1       1       0   .abs_section_14a
+     _CAN0IDAC                                  14B       1       1       0   .abs_section_14b
+     _CAN0MISC                                  14D       1       1       0   .abs_section_14d
+     _CAN0RXERR                                 14E       1       1       0   .abs_section_14e
+     _CAN0TXERR                                 14F       1       1       0   .abs_section_14f
+     _CAN0IDAR0                                 150       1       1       0   .abs_section_150
+     _CAN0IDAR1                                 151       1       1       0   .abs_section_151
+     _CAN0IDAR2                                 152       1       1       0   .abs_section_152
+     _CAN0IDAR3                                 153       1       1       0   .abs_section_153
+     _CAN0IDMR0                                 154       1       1       0   .abs_section_154
+     _CAN0IDMR1                                 155       1       1       0   .abs_section_155
+     _CAN0IDMR2                                 156       1       1       0   .abs_section_156
+     _CAN0IDMR3                                 157       1       1       0   .abs_section_157
+     _CAN0IDAR4                                 158       1       1       0   .abs_section_158
+     _CAN0IDAR5                                 159       1       1       0   .abs_section_159
+     _CAN0IDAR6                                 15A       1       1       0   .abs_section_15a
+     _CAN0IDAR7                                 15B       1       1       0   .abs_section_15b
+     _CAN0IDMR4                                 15C       1       1       0   .abs_section_15c
+     _CAN0IDMR5                                 15D       1       1       0   .abs_section_15d
+     _CAN0IDMR6                                 15E       1       1       0   .abs_section_15e
+     _CAN0IDMR7                                 15F       1       1       0   .abs_section_15f
+     _CAN0RXIDR0                                160       1       1       0   .abs_section_160
+     _CAN0RXIDR1                                161       1       1       0   .abs_section_161
+     _CAN0RXIDR2                                162       1       1       0   .abs_section_162
+     _CAN0RXIDR3                                163       1       1       0   .abs_section_163
+     _CAN0RXDSR0                                164       1       1       0   .abs_section_164
+     _CAN0RXDSR1                                165       1       1       0   .abs_section_165
+     _CAN0RXDSR2                                166       1       1       0   .abs_section_166
+     _CAN0RXDSR3                                167       1       1       0   .abs_section_167
+     _CAN0RXDSR4                                168       1       1       0   .abs_section_168
+     _CAN0RXDSR5                                169       1       1       0   .abs_section_169
+     _CAN0RXDSR6                                16A       1       1       0   .abs_section_16a
+     _CAN0RXDSR7                                16B       1       1       0   .abs_section_16b
+     _CAN0RXDLR                                 16C       1       1       0   .abs_section_16c
+     _CAN0TXIDR0                                170       1       1       0   .abs_section_170
+     _CAN0TXIDR1                                171       1       1       0   .abs_section_171
+     _CAN0TXIDR2                                172       1       1       0   .abs_section_172
+     _CAN0TXIDR3                                173       1       1       0   .abs_section_173
+     _CAN0TXDSR0                                174       1       1       0   .abs_section_174
+     _CAN0TXDSR1                                175       1       1       0   .abs_section_175
+     _CAN0TXDSR2                                176       1       1       0   .abs_section_176
+     _CAN0TXDSR3                                177       1       1       0   .abs_section_177
+     _CAN0TXDSR4                                178       1       1       0   .abs_section_178
+     _CAN0TXDSR5                                179       1       1       0   .abs_section_179
+     _CAN0TXDSR6                                17A       1       1       0   .abs_section_17a
+     _CAN0TXDSR7                                17B       1       1       0   .abs_section_17b
+     _CAN0TXDLR                                 17C       1       1       0   .abs_section_17c
+     _CAN0TXTBPR                                17D       1       1       0   .abs_section_17d
+     _PTT                                       240       1       1       0   .abs_section_240
+     _PTIT                                      241       1       1       0   .abs_section_241
+     _DDRT                                      242       1       1       0   .abs_section_242
+     _RDRT                                      243       1       1       0   .abs_section_243
+     _PERT                                      244       1       1       0   .abs_section_244
+     _PPST                                      245       1       1       0   .abs_section_245
+     _PTTRR                                     247       1       1       0   .abs_section_247
+     _PTS                                       248       1       1       0   .abs_section_248
+     _PTIS                                      249       1       1       0   .abs_section_249
+     _DDRS                                      24A       1       1       0   .abs_section_24a
+     _RDRS                                      24B       1       1       0   .abs_section_24b
+     _PERS                                      24C       1       1       0   .abs_section_24c
+     _PPSS                                      24D       1       1       0   .abs_section_24d
+     _WOMS                                      24E       1       1       0   .abs_section_24e
+     _PTM                                       250       1       1       6   .abs_section_250
+     _PTIM                                      251       1       1       0   .abs_section_251
+     _DDRM                                      252       1       1       0   .abs_section_252
+     _RDRM                                      253       1       1       0   .abs_section_253
+     _PERM                                      254       1       1       0   .abs_section_254
+     _PPSM                                      255       1       1       0   .abs_section_255
+     _WOMM                                      256       1       1       0   .abs_section_256
+     _MODRR                                     257       1       1       0   .abs_section_257
+     _PTP                                       258       1       1       1   .abs_section_258
+     _PTIP                                      259       1       1       0   .abs_section_259
+     _DDRP                                      25A       1       1       1   .abs_section_25a
+     _RDRP                                      25B       1       1       0   .abs_section_25b
+     _PERP                                      25C       1       1       0   .abs_section_25c
+     _PPSP                                      25D       1       1       0   .abs_section_25d
+     _PIEP                                      25E       1       1       0   .abs_section_25e
+     _PIFP                                      25F       1       1       0   .abs_section_25f
+     _PTH                                       260       1       1       0   .abs_section_260
+     _PTIH                                      261       1       1       0   .abs_section_261
+     _DDRH                                      262       1       1       0   .abs_section_262
+     _RDRH                                      263       1       1       0   .abs_section_263
+     _PERH                                      264       1       1       0   .abs_section_264
+     _PPSH                                      265       1       1       0   .abs_section_265
+     _PIEH                                      266       1       1       0   .abs_section_266
+     _PIFH                                      267       1       1       0   .abs_section_267
+     _PTJ                                       268       1       1       0   .abs_section_268
+     _PTIJ                                      269       1       1       0   .abs_section_269
+     _DDRJ                                      26A       1       1       0   .abs_section_26a
+     _RDRJ                                      26B       1       1       0   .abs_section_26b
+     _PERJ                                      26C       1       1       0   .abs_section_26c
+     _PPSJ                                      26D       1       1       0   .abs_section_26d
+     _PIEJ                                      26E       1       1       0   .abs_section_26e
+     _PIFJ                                      26F       1       1       0   .abs_section_26f
+     _ATD0STAT0                                 2C6       1       1       0   .abs_section_2c6
+     _VREGHTCL                                  2F0       1       1       0   .abs_section_2f0
+     _VREGCTRL                                  2F1       1       1       0   .abs_section_2f1
+     _VREGAPICL                                 2F2       1       1       0   .abs_section_2f2
+     _VREGAPITR                                 2F3       1       1       0   .abs_section_2f3
+     _VREGHTTR                                  2F7       1       1       0   .abs_section_2f7
+     _PWME                                      300       1       1      14   .abs_section_300
+     _PWMPOL                                    301       1       1       1   .abs_section_301
+     _PWMCLK                                    302       1       1       1   .abs_section_302
+     _PWMPRCLK                                  303       1       1       1   .abs_section_303
+     _PWMCAE                                    304       1       1       1   .abs_section_304
+     _PWMCTL                                    305       1       1       1   .abs_section_305
+     _PWMSCLA                                   308       1       1       1   .abs_section_308
+     _PWMSCLB                                   309       1       1       1   .abs_section_309
+     _PWMSDN                                    324       1       1       0   .abs_section_324
+     _PITCFLMT                                  340       1       1       5   .abs_section_340
+     _PITFLT                                    341       1       1       1   .abs_section_341
+     _PITCE                                     342       1       1       2   .abs_section_342
+     _PITMUX                                    343       1       1       2   .abs_section_343
+     _PITINTE                                   344       1       1       2   .abs_section_344
+     _PITTF                                     345       1       1       1   .abs_section_345
+     _PITMTLD0                                  346       1       1       1   .abs_section_346
+     _PITMTLD1                                  347       1       1       1   .abs_section_347
+     _PORTAB                                      0       2       2       1   .abs_section_0
+     _DDRAB                                       2       2       2       1   .abs_section_2
+     _PARTID                                     1A       2       2       0   .abs_section_1a
+     _DBGTB                                      24       2       2       0   .abs_section_24
+     _TCNT                                       44       2       2       0   .abs_section_44
+     _TC0                                        50       2       2       0   .abs_section_50
+     _TC1                                        52       2       2       0   .abs_section_52
+     _TC2                                        54       2       2       0   .abs_section_54
+     _TC3                                        56       2       2       0   .abs_section_56
+     _TC4                                        58       2       2       0   .abs_section_58
+     _TC5                                        5A       2       2       0   .abs_section_5a
+     _TC6                                        5C       2       2       0   .abs_section_5c
+     _TC7                                        5E       2       2       0   .abs_section_5e
+     _PACNT                                      62       2       2       3   .abs_section_62
+     _SCI0BD                                     C8       2       2       0   .abs_section_c8
+     _SCI1BD                                     D0       2       2       0   .abs_section_d0
+     _SPI0DR                                     DC       2       2       2   .abs_section_dc
+     _FCCOB                                     10A       2       2       0   .abs_section_10a
+     _FECCR                                     10E       2       2       0   .abs_section_10e
+     _CAN0RXTSR                                 16E       2       2       0   .abs_section_16e
+     _CAN0TXTSR                                 17E       2       2       0   .abs_section_17e
+     _PT01AD0                                   270       2       2      12   .abs_section_270
+     _DDR01AD0                                  272       2       2       3   .abs_section_272
+     _RDR01AD0                                  274       2       2       0   .abs_section_274
+     _PER01AD0                                  276       2       2       0   .abs_section_276
+     _ATD0CTL01                                 2C0       2       2       0   .abs_section_2c0
+     _ATD0CTL23                                 2C2       2       2       0   .abs_section_2c2
+     _ATD0CTL45                                 2C4       2       2       0   .abs_section_2c4
+     _ATD0CMPE                                  2C8       2       2       0   .abs_section_2c8
+     _ATD0STAT2                                 2CA       2       2       0   .abs_section_2ca
+     _ATD0DIEN                                  2CC       2       2       1   .abs_section_2cc
+     _ATD0CMPHT                                 2CE       2       2       0   .abs_section_2ce
+     _ATD0DR0                                   2D0       2       2       0   .abs_section_2d0
+     _ATD0DR1                                   2D2       2       2       0   .abs_section_2d2
+     _ATD0DR2                                   2D4       2       2       0   .abs_section_2d4
+     _ATD0DR3                                   2D6       2       2       0   .abs_section_2d6
+     _ATD0DR4                                   2D8       2       2       0   .abs_section_2d8
+     _ATD0DR5                                   2DA       2       2       0   .abs_section_2da
+     _ATD0DR6                                   2DC       2       2       0   .abs_section_2dc
+     _ATD0DR7                                   2DE       2       2       0   .abs_section_2de
+     _ATD0DR8                                   2E0       2       2       0   .abs_section_2e0
+     _ATD0DR9                                   2E2       2       2       0   .abs_section_2e2
+     _ATD0DR10                                  2E4       2       2       0   .abs_section_2e4
+     _ATD0DR11                                  2E6       2       2       0   .abs_section_2e6
+     _ATD0DR12                                  2E8       2       2       0   .abs_section_2e8
+     _ATD0DR13                                  2EA       2       2       0   .abs_section_2ea
+     _ATD0DR14                                  2EC       2       2       0   .abs_section_2ec
+     _ATD0DR15                                  2EE       2       2       0   .abs_section_2ee
+     _VREGAPIR                                  2F4       2       2       0   .abs_section_2f4
+     _PWMCNT01                                  30C       2       2       0   .abs_section_30c
+     _PWMCNT23                                  30E       2       2       0   .abs_section_30e
+     _PWMCNT45                                  310       2       2       0   .abs_section_310
+     _PWMCNT67                                  312       2       2       0   .abs_section_312
+     _PWMPER01                                  314       2       2       1   .abs_section_314
+     _PWMPER23                                  316       2       2       1   .abs_section_316
+     _PWMPER45                                  318       2       2       0   .abs_section_318
+     _PWMPER67                                  31A       2       2       1   .abs_section_31a
+     _PWMDTY01                                  31C       2       2       1   .abs_section_31c
+     _PWMDTY23                                  31E       2       2       3   .abs_section_31e
+     _PWMDTY45                                  320       2       2       0   .abs_section_320
+     _PWMDTY67                                  322       2       2       8   .abs_section_322
+     _PITLD0                                    348       2       2       1   .abs_section_348
+     _PITCNT0                                   34A       2       2       0   .abs_section_34a
+     _PITLD1                                    34C       2       2       1   .abs_section_34c
+     _PITCNT1                                   34E       2       2       2   .abs_section_34e
+     _PITLD2                                    350       2       2       0   .abs_section_350
+     _PITCNT2                                   352       2       2       0   .abs_section_352
+     _PITLD3                                    354       2       2       0   .abs_section_354
+     _PITCNT3                                   356       2       2       0   .abs_section_356
+MODULE:                 -- main.c.o --
+- PROCEDURES:
+     PIDInit                                 FE8000      19      25       2   .text       
+     PIDCalculate                            FE8019      68     104       2   .text       
+     get_current_speed                       FE8081      59      89       2   .text       
+     speed_ctl                               FE80DA      A6     166       2   .text       
+     pto_get_sumblock                        FE8180     230     560      26   .text       
+     find_edge                               FE83B0      7C     124       2   .text       
+     is_will_be_out                          FE842C     1E7     487      23   .text       
+     pnew_duoji_control                      FE8613     641    1601      68   .text       
+     duoji_control                           FE8C54     1AE     430       4   .text       
+     enstart_duoji                           FE8E02      53      83       2   .text       
+     clear_this_field_flag                   FE8E55      75     117       4   .text       
+     select_speed                            FE8ECA      93     147       2   .text       
+     set_speed                               FE8F5D     37A     890      25   .text       
+     cabs_uchar                              FE92D7       6       6      42   .text       
+     init_all                                FE92DD      2B      43       2   .text       
+     is_shizi                                FE9308     163     355       7   .text       
+     is_the_startline                        FE946B      D7     215       4   .text       
+     to_find_both_startline_new              FE9542     202     514      15   .text       
+     to_find_both_line_new                   FE9744     188     392       7   .text       
+     to_find_both_startline                  FE98CC     192     402      10   .text       
+     to_find_left_startline                  FE9A5E      6C     108       4   .text       
+     to_find_right_startline                 FE9ACA      6C     108       4   .text       
+     get_path_left                           FE9B36      7E     126      14   .text       
+     get_path_right                          FE9BB4      80     128      14   .text       
+     to_save_thisfield_state                 FE9C34      2F      47       2   .text       
+     getline_when_shizi                      FE9C63      61      97       4   .text       
+     to_save_this_hang_state                 FE9CC4       D      13       2   .text       
+     bvbo_when_no_real_start                 FE9CD1     438    1080      42   .text       
+     lvbo                                    FEA109     6CB    1739     122   .text       
+     car_control_after_a_field               FEA7D4      AF     175       2   .text       
+     how_to_do_when_shizi                    FEA883      E7     231       4   .text       
+     main                                    FEA96A     114     276       3   .text       
+     field_interrupt                           C019      24      36       1   NON_BANKED  
+     odd_even_interrupt                        C03D       4       4       1   NON_BANKED  
+     row_interrupt                             C041      9F     159       1   NON_BANKED  
+     rising_interrupt                          C0E0      35      53       1   NON_BANKED  
+     falling_interrupt                         C115      35      53       1   NON_BANKED  
+     testt                                     C14A       B      11       1   NON_BANKED  
+- VARIABLES:
+     quan                                      2100      64     100       1   .data       
+     cmos                                      2164      32      50       1   .data       
+     OutputSpeed                               2196       2       2       5   .bss        
+     CSpeedArraySum                            2198       2       2       2   .bss        
+     CSpeedArraySum1                           219A       2       2       3   .bss        
+     _Vector_8                                 FFEE       2       2       0   .abs_section_ffee
+     _Vector_9                                 FFEC       2       2       0   .abs_section_ffec
+     _Vector_10                                FFEA       2       2       0   .abs_section_ffea
+     _Vector_11                                FFE8       2       2       0   .abs_section_ffe8
+     _Vector_12                                FFE6       2       2       0   .abs_section_ffe6
+     _Vector_66                                FF7A       2       2       0   .abs_section_ff7a
+     numb_cmos                                 219D       1       1       3   .common     
+     v_point_up                                219E     12C     300      49   .common     
+     v_point_down                              22CA     12C     300      42   .common     
+     use_ad_con                                23F6       1       1       2   .common     
+     pre_e0                                    23F7       1       1       1   .common     
+     Flag_Up                                   23F8       1       1       5   .common     
+     Flag_Down                                 23F9       1       1       5   .common     
+     Line_CCD                                  23FA       2       2       5   .common     
+     Line_Save                                 23FC       1       1      11   .common     
+     PITCNT1temp                               23FD       2       2       4   .common     
+     Pre_Line_Save                             23FF       1       1      85   .common     
+     pt_left                                   2400       2       2       1   .common     
+     pt_right                                  2402       2       2       1   .common     
+     pangle_left                               2404       2       2       1   .common     
+     pangle_right                              2406       2       2       1   .common     
+     pt_left_line                              2408       1       1       1   .common     
+     pt_right_line                             2409       1       1       1   .common     
+     will_be_out                               240A       1       1       1   .common     
+     will_be_out_left                          240B       1       1       2   .common     
+     will_be_out_right                         240C       1       1       2   .common     
+     sum_Block                                 240D       2       2       4   .common     
+     point_up                                  240F      3C      60      40   .common     
+     point_down                                244B      3C      60      42   .common     
+     p_point_up                                2487      78     120      23   .common     
+     p_point_down                              24FF      78     120      27   .common     
+     stop_find_right                           2577       1       1      15   .common     
+     stop_find_left                            2578       1       1      15   .common     
+     Flag_Lose_Line                            2579       1       1       6   .common     
+     is_find_a_real_start                      257A       1       1       6   .common     
+     not_find_a_real_start                     257B       1       1       4   .common     
+     num_wrong_left                            257C       1       1      13   .common     
+     num_wrong_right                           257D       1       1      13   .common     
+     End_Line                                  257E       2       2       1   .common     
+     num_find                                  2580       1       1       4   .common     
+     num_shizi                                 2581       1       1       6   .common     
+     flag_shizi                                2582       1       1      11   .common     
+     flag_not_shizi                            2583       1       1       3   .common     
+     stright_flag                              2584       1       1       1   .common     
+     stright                                   2585       2       2       3   .common     
+     flag_find_aftershizi                      2587       1       1      10   .common     
+     is_have_a_lstl                            2588       1       1       5   .common     
+     is_have_a_rstl                            2589       1       1       5   .common     
+     find_left_startline                       258A       1       1      56   .common     
+     find_right_startline                      258B       1       1      52   .common     
+     pfind_left_startline                      258C       1       1      14   .common     
+     pfind_right_startline                     258D       1       1      17   .common     
+     left_stratline                            258E       1       1      33   .common     
+     right_startline                           258F       1       1      39   .common     
+     pleft_endline                             2590       1       1       3   .common     
+     pright_endline                            2591       1       1       4   .common     
+     find_last_lstl                            2592       1       1      15   .common     
+     find_last_rstl                            2593       1       1      17   .common     
+     pre_left_stl                              2594       1       1       1   .common     
+     pre_right_stl                             2595       1       1       1   .common     
+     pre_left_stl_error                        2596       1       1       5   .common     
+     pre_right_stl_error                       2597       1       1       5   .common     
+     last_stl                                  2598       1       1       6   .common     
+     error                                     2599       4       4      17   .common     
+     SteerAngle0                               259D       4       4      10   .common     
+     SteerAngle1                               25A1       4       4       4   .common     
+     SteerAngle                                25A5       4       4      48   .common     
+     p_SteerAngle0                             25A9       4       4      17   .common     
+     pre_SteerAngle                            25AD       4       4       2   .common     
+     now_pwmdty67                              25B1       2       2       2   .common     
+     xiuzheng_error                            25B3       2       2       4   .common     
+     mid_error                                 25B5       2       2       4   .common     
+     start_error                               25B7       2       2       1   .common     
+     x                                         25B9       1       1       4   .common     
+     is_odd                                    25BA       1       1       3   .common     
+     x_error                                   25BB       2       2       5   .common     
+     pre_x_error                               25BD       2       2       2   .common     
+     ee_x_error                                25BF       2       2       1   .common     
+     dian_sha                                  25C1       1       1       1   .common     
+     left_block0                               25C2       2       2      49   .common     
+     right_block0                              25C4       2       2      42   .common     
+     find_left                                 25C6       1       1      35   .common     
+     find_right                                25C7       1       1      32   .common     
+     find_last_left                            25C8       1       1       3   .common     
+     find_last_right                           25C9       1       1       3   .common     
+     left_endline                              25CA       1       1      50   .common     
+     right_endline                             25CB       1       1      52   .common     
+     num_onlyfind_one_startline                25CC       1       1       1   .common     
+     test_error                                25CD       1       1       2   .common     
+     valium                                    25CE       1       1       5   .common     
+     mid_valium                                25CF       1       1       2   .common     
+     turn_left                                 25D0       1       1       4   .common     
+     turn_right                                25D1       1       1       4   .common     
+     condition_1                               25D2       1       1       2   .common     
+     condition_2                               25D3       1       1       2   .common     
+     condition_3                               25D4       1       1       2   .common     
+     condition_4                               25D5       1       1       2   .common     
+     condition_5                               25D6       1       1       2   .common     
+     condition_6                               25D7       1       1       2   .common     
+     condition_7                               25D8       1       1       2   .common     
+     condition_8                               25D9       1       1       2   .common     
+     condition_9                               25DA       1       1       2   .common     
+     condition_10                              25DB       1       1       2   .common     
+     condition_11                              25DC       1       1       2   .common     
+     condition_12                              25DD       1       1       2   .common     
+     condition_13                              25DE       1       1       3   .common     
+     condition_14                              25DF       1       1       2   .common     
+     condition_15                              25E0       1       1       2   .common     
+     condition_16                              25E1       1       1       2   .common     
+     condition_17                              25E2       1       1       2   .common     
+     condition_18                              25E3       1       1       2   .common     
+     condition_19                              25E4       1       1       2   .common     
+     condition_20                              25E5       1       1       1   .common     
+     test_left_stl                             25E6       1       1       2   .common     
+     test_right_stl                            25E7       1       1       2   .common     
+     test_left                                 25E8       1       1       2   .common     
+     test_right                                25E9       1       1       2   .common     
+     test_a                                    25EA       1       1       6   .common     
+     test_b                                    25EB       1       1       5   .common     
+     test_stl_error                            25EC       1       1       2   .common     
+     test_str_error                            25ED       1       1       2   .common     
+     test_c                                    25EE       1       1       1   .common     
+     test_d                                    25EF       1       1       1   .common     
+     test_flag_shizi                           25F0       1       1       2   .common     
+     test_sum                                  25F1       4       4       2   .common     
+     flag_ed                                   25F5       1       1       3   .common     
+     test_aa_lstl                              25F6       1       1       2   .common     
+     test_aa_rstl                              25F7       1       1       2   .common     
+     test_bbhh                                 25F8       1       1       2   .common     
+     is_startline1                             25F9       1       1       2   .common     
+     is_startline2                             25FA       1       1       4   .common     
+     is_startline3                             25FB       1       1       2   .common     
+     is_startline                              25FC       1       1       3   .common     
+     num_chang                                 25FD       2       2       7   .common     
+     num_shizi_chang                           25FF       2       2       9   .common     
+     shorter_line                              2601       1       1       4   .common     
+     sum_zhidao                                2602       2       2      16   .common     
+     num_zhidao                                2604       1       1       7   .common     
+     need_cut_speed                            2605       1       1       1   .common     
+     CurrentSpeed                              2606       2       2       6   .common     
+     CSpeedArray                               2608       A      10       5   .common     
+     PWM                                       2612       2       2       1   .common     
+     StraightSpeed                             2614       2       2       2   .common     
+     CurveSpeed                                2616       2       2       3   .common     
+     angle                                     2618       2       2       5   .common     
+     send                                      261A       1       1       1   .common     
+     test                                      261B       2       2       2   .common     
+     zhidao_speed                              261D       2       2      10   .common     
+     shizi_speed                               261F       2       2       4   .common     
+     refer_speed                               2621       2       2       4   .common     
+     limit_speed                               2623       2       2       4   .common     
+     is_use_start                              2625       1       1       3   .common     
+     big_left                                  2626       1       1       4   .common     
+     little_right                              2627       1       1       4   .common     
+     sum_little_angle                          2628       1       1       5   .common     
+     sum_cut                                   2629       1       1       1   .common     
+     aver_pwm                                  262A       4       4      10   .common     
+     num_pwm                                   262E       4       4      10   .common     
+     flag_use_special_cutspeed                 2632       1       1       3   .common     
+     sum_wandao                                2633       1       1       7   .common     
+     MyPID                                     2634      14      20      43   .common     
+MODULE:                 -- Start12.c.o --
+- PROCEDURES:
+     Init                                    FEAA7E      29      41       2   .text       
+     _Startup                                  C000       F      15       0   .init       
+- VARIABLES:
+     _startupData                              C00F       6       6       3   .startData  
+- LABELS:
+     __SEG_END_SSTACK                          2100       0       0       1               
+MODULE:                 -- rtshc12.c.o (ansixbi.lib) --
+- PROCEDURES:
+     _BDIVMODU                                 C155       A      10       1   NON_BANKED  
+     _LSHRS                                    C15F       E      14       2   NON_BANKED  
+     _LCMP                                     C16D       A      10       2   NON_BANKED  
+     _LNEG                                     C177       9       9       1   NON_BANKED  
+     _LINC                                     C180       5       5       1   NON_BANKED  
+     _LMULS16x32                               C185      1C      28       3   NON_BANKED  
+     _lDivMod                                  C1A1      B9     185       3   NON_BANKED  
+     _LDIVU                                    C25A       E      14       2   NON_BANKED  
+     _NEG_P                                    C268       C      12       4   NON_BANKED  
+     _LDIVS                                    C274      35      53       3   NON_BANKED  
+- VARIABLES:
+MODULE:                 -- Init.c.o --
+- PROCEDURES:
+     PLL_Init                                FEAAA7      1A      26       2   .text       
+     PIT_Init                                FEAAC1      20      32       2   .text       
+     ECT0_init                               FEAAE1      38      56       2   .text       
+     ECT_Init                                FEAB19       9       9       2   .text       
+     PWM_Init                                FEAB22      59      89       2   .text       
+     PIT1_init                               FEAB7B      20      32       2   .text       
+     Dial_Switch_init                        FEAB9B       D      13       2   .text       
+- VARIABLES:
+MODULE:                 -- nRF24L01.c.o --
+- PROCEDURES:
+     SPI_Write_Byte                          FEABA8      12      18      12   .text       
+     SPI_RW_Reg                              FEABBA      19      25       4   .text       
+     SPI_Read_Byte                           FEABD3      12      18       2   .text       
+     SPI_Read_Buf                            FEABE5      2C      44       2   .text       
+     IRQ_ISR                                   C2A9      48      72       1   NON_BANKED  
+- VARIABLES:
+     Rx_Buf                                    219C       1       1       1   .bss        
+     _Vector_6                                 FFF2       2       2       0   .abs_section_fff2
+     Status_Flag                               2648       1       1       2   .common     
+     Status_Value                              2649       1       1       4   .common     
+
+*********************************************************************************************
+MODULE STATISTIC
+  Name                                      Data   Code  Const
+---------------------------------------------------------------------------------------------
+  MC9S12XS128.c.o                            360      0      0
+  main.c.o                                  1351  11194     12
+  Start12.c.o                                  0     56      0
+  rtshc12.c.o (ansixbi.lib)                    0    340      0
+  Init.c.o                                     0    257      0
+  nRF24L01.c.o                                 3    177      2
+  other                                      256     12    155
+
+*********************************************************************************************
+SECTION USE IN OBJECT-ALLOCATION SECTION
+---------------------------------------------------------------------------------------------
+SECTION: ".text"
+  PIDInit PIDCalculate get_current_speed speed_ctl pto_get_sumblock find_edge 
+  is_will_be_out pnew_duoji_control duoji_control enstart_duoji 
+  clear_this_field_flag select_speed set_speed cabs_uchar init_all is_shizi 
+  is_the_startline to_find_both_startline_new to_find_both_line_new 
+  to_find_both_startline to_find_left_startline to_find_right_startline 
+  get_path_left get_path_right to_save_thisfield_state getline_when_shizi 
+  to_save_this_hang_state bvbo_when_no_real_start lvbo 
+  car_control_after_a_field how_to_do_when_shizi main Init PLL_Init PIT_Init 
+  ECT0_init ECT_Init PWM_Init PIT1_init Dial_Switch_init SPI_Write_Byte 
+  SPI_RW_Reg SPI_Read_Byte SPI_Read_Buf 
+SECTION: ".data"
+  quan cmos 
+SECTION: ".bss"
+  OutputSpeed CSpeedArraySum CSpeedArraySum1 Rx_Buf 
+SECTION: ".init"
+  _Startup 
+SECTION: "NON_BANKED"
+  field_interrupt odd_even_interrupt row_interrupt rising_interrupt 
+  falling_interrupt testt _BDIVMODU _LSHRS _LCMP _LNEG _LINC _LMULS16x32 
+  _lDivMod _LDIVU _NEG_P _LDIVS IRQ_ISR 
+SECTION: ".abs_section_8"
+  _PORTE 
+SECTION: ".abs_section_9"
+  _DDRE 
+SECTION: ".abs_section_b"
+  _MODE 
+SECTION: ".abs_section_c"
+  _PUCR 
+SECTION: ".abs_section_d"
+  _RDRIV 
+SECTION: ".abs_section_10"
+  _GPAGE 
+SECTION: ".abs_section_11"
+  _DIRECT 
+SECTION: ".abs_section_13"
+  _MMCCTL1 
+SECTION: ".abs_section_15"
+  _PPAGE 
+SECTION: ".abs_section_16"
+  _RPAGE 
+SECTION: ".abs_section_17"
+  _EPAGE 
+SECTION: ".abs_section_1c"
+  _ECLKCTL 
+SECTION: ".abs_section_1e"
+  _IRQCR 
+SECTION: ".abs_section_20"
+  _DBGC1 
+SECTION: ".abs_section_21"
+  _DBGSR 
+SECTION: ".abs_section_22"
+  _DBGTCR 
+SECTION: ".abs_section_23"
+  _DBGC2 
+SECTION: ".abs_section_26"
+  _DBGCNT 
+SECTION: ".abs_section_27"
+  _DBGSCRX 
+SECTION: ".abs_section_28"
+  _DBGXCTL 
+SECTION: ".abs_section_29"
+  _DBGXAH 
+SECTION: ".abs_section_2a"
+  _DBGXAM 
+SECTION: ".abs_section_2b"
+  _DBGXAL 
+SECTION: ".abs_section_2c"
+  _DBGXDH 
+SECTION: ".abs_section_2d"
+  _DBGXDL 
+SECTION: ".abs_section_2e"
+  _DBGXDHM 
+SECTION: ".abs_section_2f"
+  _DBGXDLM 
+SECTION: ".abs_section_32"
+  _PORTK 
+SECTION: ".abs_section_33"
+  _DDRK 
+SECTION: ".abs_section_34"
+  _SYNR 
+SECTION: ".abs_section_35"
+  _REFDV 
+SECTION: ".abs_section_36"
+  _POSTDIV 
+SECTION: ".abs_section_37"
+  _CRGFLG 
+SECTION: ".abs_section_38"
+  _CRGINT 
+SECTION: ".abs_section_39"
+  _CLKSEL 
+SECTION: ".abs_section_3a"
+  _PLLCTL 
+SECTION: ".abs_section_3b"
+  _RTICTL 
+SECTION: ".abs_section_3c"
+  _COPCTL 
+SECTION: ".abs_section_3f"
+  _ARMCOP 
+SECTION: ".abs_section_40"
+  _TIOS 
+SECTION: ".abs_section_41"
+  _CFORC 
+SECTION: ".abs_section_42"
+  _OC7M 
+SECTION: ".abs_section_43"
+  _OC7D 
+SECTION: ".abs_section_46"
+  _TSCR1 
+SECTION: ".abs_section_47"
+  _TTOV 
+SECTION: ".abs_section_48"
+  _TCTL1 
+SECTION: ".abs_section_49"
+  _TCTL2 
+SECTION: ".abs_section_4a"
+  _TCTL3 
+SECTION: ".abs_section_4b"
+  _TCTL4 
+SECTION: ".abs_section_4c"
+  _TIE 
+SECTION: ".abs_section_4d"
+  _TSCR2 
+SECTION: ".abs_section_4e"
+  _TFLG1 
+SECTION: ".abs_section_4f"
+  _TFLG2 
+SECTION: ".abs_section_60"
+  _PACTL 
+SECTION: ".abs_section_61"
+  _PAFLG 
+SECTION: ".abs_section_6c"
+  _OCPD 
+SECTION: ".abs_section_6e"
+  _PTPSR 
+SECTION: ".abs_section_ca"
+  _SCI0ACR2 
+SECTION: ".abs_section_cb"
+  _SCI0CR2 
+SECTION: ".abs_section_cc"
+  _SCI0SR1 
+SECTION: ".abs_section_cd"
+  _SCI0SR2 
+SECTION: ".abs_section_ce"
+  _SCI0DRH 
+SECTION: ".abs_section_cf"
+  _SCI0DRL 
+SECTION: ".abs_section_d2"
+  _SCI1ACR2 
+SECTION: ".abs_section_d3"
+  _SCI1CR2 
+SECTION: ".abs_section_d4"
+  _SCI1SR1 
+SECTION: ".abs_section_d5"
+  _SCI1SR2 
+SECTION: ".abs_section_d6"
+  _SCI1DRH 
+SECTION: ".abs_section_d7"
+  _SCI1DRL 
+SECTION: ".abs_section_d8"
+  _SPI0CR1 
+SECTION: ".abs_section_d9"
+  _SPI0CR2 
+SECTION: ".abs_section_da"
+  _SPI0BR 
+SECTION: ".abs_section_db"
+  _SPI0SR 
+SECTION: ".abs_section_100"
+  _FCLKDIV 
+SECTION: ".abs_section_101"
+  _FSEC 
+SECTION: ".abs_section_102"
+  _FCCOBIX 
+SECTION: ".abs_section_103"
+  _FECCRIX 
+SECTION: ".abs_section_104"
+  _FCNFG 
+SECTION: ".abs_section_105"
+  _FERCNFG 
+SECTION: ".abs_section_106"
+  _FSTAT 
+SECTION: ".abs_section_107"
+  _FERSTAT 
+SECTION: ".abs_section_108"
+  _FPROT 
+SECTION: ".abs_section_109"
+  _DFPROT 
+SECTION: ".abs_section_110"
+  _FOPT 
+SECTION: ".abs_section_121"
+  _IVBR 
+SECTION: ".abs_section_126"
+  _INT_XGPRIO 
+SECTION: ".abs_section_127"
+  _INT_CFADDR 
+SECTION: ".abs_section_128"
+  _INT_CFDATA0 
+SECTION: ".abs_section_129"
+  _INT_CFDATA1 
+SECTION: ".abs_section_12a"
+  _INT_CFDATA2 
+SECTION: ".abs_section_12b"
+  _INT_CFDATA3 
+SECTION: ".abs_section_12c"
+  _INT_CFDATA4 
+SECTION: ".abs_section_12d"
+  _INT_CFDATA5 
+SECTION: ".abs_section_12e"
+  _INT_CFDATA6 
+SECTION: ".abs_section_12f"
+  _INT_CFDATA7 
+SECTION: ".abs_section_140"
+  _CAN0CTL0 
+SECTION: ".abs_section_141"
+  _CAN0CTL1 
+SECTION: ".abs_section_142"
+  _CAN0BTR0 
+SECTION: ".abs_section_143"
+  _CAN0BTR1 
+SECTION: ".abs_section_144"
+  _CAN0RFLG 
+SECTION: ".abs_section_145"
+  _CAN0RIER 
+SECTION: ".abs_section_146"
+  _CAN0TFLG 
+SECTION: ".abs_section_147"
+  _CAN0TIER 
+SECTION: ".abs_section_148"
+  _CAN0TARQ 
+SECTION: ".abs_section_149"
+  _CAN0TAAK 
+SECTION: ".abs_section_14a"
+  _CAN0TBSEL 
+SECTION: ".abs_section_14b"
+  _CAN0IDAC 
+SECTION: ".abs_section_14d"
+  _CAN0MISC 
+SECTION: ".abs_section_14e"
+  _CAN0RXERR 
+SECTION: ".abs_section_14f"
+  _CAN0TXERR 
+SECTION: ".abs_section_150"
+  _CAN0IDAR0 
+SECTION: ".abs_section_151"
+  _CAN0IDAR1 
+SECTION: ".abs_section_152"
+  _CAN0IDAR2 
+SECTION: ".abs_section_153"
+  _CAN0IDAR3 
+SECTION: ".abs_section_154"
+  _CAN0IDMR0 
+SECTION: ".abs_section_155"
+  _CAN0IDMR1 
+SECTION: ".abs_section_156"
+  _CAN0IDMR2 
+SECTION: ".abs_section_157"
+  _CAN0IDMR3 
+SECTION: ".abs_section_158"
+  _CAN0IDAR4 
+SECTION: ".abs_section_159"
+  _CAN0IDAR5 
+SECTION: ".abs_section_15a"
+  _CAN0IDAR6 
+SECTION: ".abs_section_15b"
+  _CAN0IDAR7 
+SECTION: ".abs_section_15c"
+  _CAN0IDMR4 
+SECTION: ".abs_section_15d"
+  _CAN0IDMR5 
+SECTION: ".abs_section_15e"
+  _CAN0IDMR6 
+SECTION: ".abs_section_15f"
+  _CAN0IDMR7 
+SECTION: ".abs_section_160"
+  _CAN0RXIDR0 
+SECTION: ".abs_section_161"
+  _CAN0RXIDR1 
+SECTION: ".abs_section_162"
+  _CAN0RXIDR2 
+SECTION: ".abs_section_163"
+  _CAN0RXIDR3 
+SECTION: ".abs_section_164"
+  _CAN0RXDSR0 
+SECTION: ".abs_section_165"
+  _CAN0RXDSR1 
+SECTION: ".abs_section_166"
+  _CAN0RXDSR2 
+SECTION: ".abs_section_167"
+  _CAN0RXDSR3 
+SECTION: ".abs_section_168"
+  _CAN0RXDSR4 
+SECTION: ".abs_section_169"
+  _CAN0RXDSR5 
+SECTION: ".abs_section_16a"
+  _CAN0RXDSR6 
+SECTION: ".abs_section_16b"
+  _CAN0RXDSR7 
+SECTION: ".abs_section_16c"
+  _CAN0RXDLR 
+SECTION: ".abs_section_170"
+  _CAN0TXIDR0 
+SECTION: ".abs_section_171"
+  _CAN0TXIDR1 
+SECTION: ".abs_section_172"
+  _CAN0TXIDR2 
+SECTION: ".abs_section_173"
+  _CAN0TXIDR3 
+SECTION: ".abs_section_174"
+  _CAN0TXDSR0 
+SECTION: ".abs_section_175"
+  _CAN0TXDSR1 
+SECTION: ".abs_section_176"
+  _CAN0TXDSR2 
+SECTION: ".abs_section_177"
+  _CAN0TXDSR3 
+SECTION: ".abs_section_178"
+  _CAN0TXDSR4 
+SECTION: ".abs_section_179"
+  _CAN0TXDSR5 
+SECTION: ".abs_section_17a"
+  _CAN0TXDSR6 
+SECTION: ".abs_section_17b"
+  _CAN0TXDSR7 
+SECTION: ".abs_section_17c"
+  _CAN0TXDLR 
+SECTION: ".abs_section_17d"
+  _CAN0TXTBPR 
+SECTION: ".abs_section_240"
+  _PTT 
+SECTION: ".abs_section_241"
+  _PTIT 
+SECTION: ".abs_section_242"
+  _DDRT 
+SECTION: ".abs_section_243"
+  _RDRT 
+SECTION: ".abs_section_244"
+  _PERT 
+SECTION: ".abs_section_245"
+  _PPST 
+SECTION: ".abs_section_247"
+  _PTTRR 
+SECTION: ".abs_section_248"
+  _PTS 
+SECTION: ".abs_section_249"
+  _PTIS 
+SECTION: ".abs_section_24a"
+  _DDRS 
+SECTION: ".abs_section_24b"
+  _RDRS 
+SECTION: ".abs_section_24c"
+  _PERS 
+SECTION: ".abs_section_24d"
+  _PPSS 
+SECTION: ".abs_section_24e"
+  _WOMS 
+SECTION: ".abs_section_250"
+  _PTM 
+SECTION: ".abs_section_251"
+  _PTIM 
+SECTION: ".abs_section_252"
+  _DDRM 
+SECTION: ".abs_section_253"
+  _RDRM 
+SECTION: ".abs_section_254"
+  _PERM 
+SECTION: ".abs_section_255"
+  _PPSM 
+SECTION: ".abs_section_256"
+  _WOMM 
+SECTION: ".abs_section_257"
+  _MODRR 
+SECTION: ".abs_section_258"
+  _PTP 
+SECTION: ".abs_section_259"
+  _PTIP 
+SECTION: ".abs_section_25a"
+  _DDRP 
+SECTION: ".abs_section_25b"
+  _RDRP 
+SECTION: ".abs_section_25c"
+  _PERP 
+SECTION: ".abs_section_25d"
+  _PPSP 
+SECTION: ".abs_section_25e"
+  _PIEP 
+SECTION: ".abs_section_25f"
+  _PIFP 
+SECTION: ".abs_section_260"
+  _PTH 
+SECTION: ".abs_section_261"
+  _PTIH 
+SECTION: ".abs_section_262"
+  _DDRH 
+SECTION: ".abs_section_263"
+  _RDRH 
+SECTION: ".abs_section_264"
+  _PERH 
+SECTION: ".abs_section_265"
+  _PPSH 
+SECTION: ".abs_section_266"
+  _PIEH 
+SECTION: ".abs_section_267"
+  _PIFH 
+SECTION: ".abs_section_268"
+  _PTJ 
+SECTION: ".abs_section_269"
+  _PTIJ 
+SECTION: ".abs_section_26a"
+  _DDRJ 
+SECTION: ".abs_section_26b"
+  _RDRJ 
+SECTION: ".abs_section_26c"
+  _PERJ 
+SECTION: ".abs_section_26d"
+  _PPSJ 
+SECTION: ".abs_section_26e"
+  _PIEJ 
+SECTION: ".abs_section_26f"
+  _PIFJ 
+SECTION: ".abs_section_2c6"
+  _ATD0STAT0 
+SECTION: ".abs_section_2f0"
+  _VREGHTCL 
+SECTION: ".abs_section_2f1"
+  _VREGCTRL 
+SECTION: ".abs_section_2f2"
+  _VREGAPICL 
+SECTION: ".abs_section_2f3"
+  _VREGAPITR 
+SECTION: ".abs_section_2f7"
+  _VREGHTTR 
+SECTION: ".abs_section_300"
+  _PWME 
+SECTION: ".abs_section_301"
+  _PWMPOL 
+SECTION: ".abs_section_302"
+  _PWMCLK 
+SECTION: ".abs_section_303"
+  _PWMPRCLK 
+SECTION: ".abs_section_304"
+  _PWMCAE 
+SECTION: ".abs_section_305"
+  _PWMCTL 
+SECTION: ".abs_section_308"
+  _PWMSCLA 
+SECTION: ".abs_section_309"
+  _PWMSCLB 
+SECTION: ".abs_section_324"
+  _PWMSDN 
+SECTION: ".abs_section_340"
+  _PITCFLMT 
+SECTION: ".abs_section_341"
+  _PITFLT 
+SECTION: ".abs_section_342"
+  _PITCE 
+SECTION: ".abs_section_343"
+  _PITMUX 
+SECTION: ".abs_section_344"
+  _PITINTE 
+SECTION: ".abs_section_345"
+  _PITTF 
+SECTION: ".abs_section_346"
+  _PITMTLD0 
+SECTION: ".abs_section_347"
+  _PITMTLD1 
+SECTION: ".abs_section_0"
+  _PORTAB 
+SECTION: ".abs_section_2"
+  _DDRAB 
+SECTION: ".abs_section_1a"
+  _PARTID 
+SECTION: ".abs_section_24"
+  _DBGTB 
+SECTION: ".abs_section_44"
+  _TCNT 
+SECTION: ".abs_section_50"
+  _TC0 
+SECTION: ".abs_section_52"
+  _TC1 
+SECTION: ".abs_section_54"
+  _TC2 
+SECTION: ".abs_section_56"
+  _TC3 
+SECTION: ".abs_section_58"
+  _TC4 
+SECTION: ".abs_section_5a"
+  _TC5 
+SECTION: ".abs_section_5c"
+  _TC6 
+SECTION: ".abs_section_5e"
+  _TC7 
+SECTION: ".abs_section_62"
+  _PACNT 
+SECTION: ".abs_section_c8"
+  _SCI0BD 
+SECTION: ".abs_section_d0"
+  _SCI1BD 
+SECTION: ".abs_section_dc"
+  _SPI0DR 
+SECTION: ".abs_section_10a"
+  _FCCOB 
+SECTION: ".abs_section_10e"
+  _FECCR 
+SECTION: ".abs_section_16e"
+  _CAN0RXTSR 
+SECTION: ".abs_section_17e"
+  _CAN0TXTSR 
+SECTION: ".abs_section_270"
+  _PT01AD0 
+SECTION: ".abs_section_272"
+  _DDR01AD0 
+SECTION: ".abs_section_274"
+  _RDR01AD0 
+SECTION: ".abs_section_276"
+  _PER01AD0 
+SECTION: ".abs_section_2c0"
+  _ATD0CTL01 
+SECTION: ".abs_section_2c2"
+  _ATD0CTL23 
+SECTION: ".abs_section_2c4"
+  _ATD0CTL45 
+SECTION: ".abs_section_2c8"
+  _ATD0CMPE 
+SECTION: ".abs_section_2ca"
+  _ATD0STAT2 
+SECTION: ".abs_section_2cc"
+  _ATD0DIEN 
+SECTION: ".abs_section_2ce"
+  _ATD0CMPHT 
+SECTION: ".abs_section_2d0"
+  _ATD0DR0 
+SECTION: ".abs_section_2d2"
+  _ATD0DR1 
+SECTION: ".abs_section_2d4"
+  _ATD0DR2 
+SECTION: ".abs_section_2d6"
+  _ATD0DR3 
+SECTION: ".abs_section_2d8"
+  _ATD0DR4 
+SECTION: ".abs_section_2da"
+  _ATD0DR5 
+SECTION: ".abs_section_2dc"
+  _ATD0DR6 
+SECTION: ".abs_section_2de"
+  _ATD0DR7 
+SECTION: ".abs_section_2e0"
+  _ATD0DR8 
+SECTION: ".abs_section_2e2"
+  _ATD0DR9 
+SECTION: ".abs_section_2e4"
+  _ATD0DR10 
+SECTION: ".abs_section_2e6"
+  _ATD0DR11 
+SECTION: ".abs_section_2e8"
+  _ATD0DR12 
+SECTION: ".abs_section_2ea"
+  _ATD0DR13 
+SECTION: ".abs_section_2ec"
+  _ATD0DR14 
+SECTION: ".abs_section_2ee"
+  _ATD0DR15 
+SECTION: ".abs_section_2f4"
+  _VREGAPIR 
+SECTION: ".abs_section_30c"
+  _PWMCNT01 
+SECTION: ".abs_section_30e"
+  _PWMCNT23 
+SECTION: ".abs_section_310"
+  _PWMCNT45 
+SECTION: ".abs_section_312"
+  _PWMCNT67 
+SECTION: ".abs_section_314"
+  _PWMPER01 
+SECTION: ".abs_section_316"
+  _PWMPER23 
+SECTION: ".abs_section_318"
+  _PWMPER45 
+SECTION: ".abs_section_31a"
+  _PWMPER67 
+SECTION: ".abs_section_31c"
+  _PWMDTY01 
+SECTION: ".abs_section_31e"
+  _PWMDTY23 
+SECTION: ".abs_section_320"
+  _PWMDTY45 
+SECTION: ".abs_section_322"
+  _PWMDTY67 
+SECTION: ".abs_section_348"
+  _PITLD0 
+SECTION: ".abs_section_34a"
+  _PITCNT0 
+SECTION: ".abs_section_34c"
+  _PITLD1 
+SECTION: ".abs_section_34e"
+  _PITCNT1 
+SECTION: ".abs_section_350"
+  _PITLD2 
+SECTION: ".abs_section_352"
+  _PITCNT2 
+SECTION: ".abs_section_354"
+  _PITLD3 
+SECTION: ".abs_section_356"
+  _PITCNT3 
+SECTION: ".abs_section_ffee"
+  _Vector_8 
+SECTION: ".abs_section_ffec"
+  _Vector_9 
+SECTION: ".abs_section_ffea"
+  _Vector_10 
+SECTION: ".abs_section_ffe8"
+  _Vector_11 
+SECTION: ".abs_section_ffe6"
+  _Vector_12 
+SECTION: ".abs_section_ff7a"
+  _Vector_66 
+SECTION: ".common"
+  numb_cmos v_point_up v_point_down use_ad_con pre_e0 Flag_Up Flag_Down 
+  Line_CCD Line_Save PITCNT1temp Pre_Line_Save pt_left pt_right pangle_left 
+  pangle_right pt_left_line pt_right_line will_be_out will_be_out_left 
+  will_be_out_right sum_Block point_up point_down p_point_up p_point_down 
+  stop_find_right stop_find_left Flag_Lose_Line is_find_a_real_start 
+  not_find_a_real_start num_wrong_left num_wrong_right End_Line num_find 
+  num_shizi flag_shizi flag_not_shizi stright_flag stright flag_find_aftershizi 
+  is_have_a_lstl is_have_a_rstl find_left_startline find_right_startline 
+  pfind_left_startline pfind_right_startline left_stratline right_startline 
+  pleft_endline pright_endline find_last_lstl find_last_rstl pre_left_stl 
+  pre_right_stl pre_left_stl_error pre_right_stl_error last_stl error 
+  SteerAngle0 SteerAngle1 SteerAngle p_SteerAngle0 pre_SteerAngle now_pwmdty67 
+  xiuzheng_error mid_error start_error x is_odd x_error pre_x_error ee_x_error 
+  dian_sha left_block0 right_block0 find_left find_right find_last_left 
+  find_last_right left_endline right_endline num_onlyfind_one_startline 
+  test_error valium mid_valium turn_left turn_right condition_1 condition_2 
+  condition_3 condition_4 condition_5 condition_6 condition_7 condition_8 
+  condition_9 condition_10 condition_11 condition_12 condition_13 condition_14 
+  condition_15 condition_16 condition_17 condition_18 condition_19 condition_20 
+  test_left_stl test_right_stl test_left test_right test_a test_b 
+  test_stl_error test_str_error test_c test_d test_flag_shizi test_sum flag_ed 
+  test_aa_lstl test_aa_rstl test_bbhh is_startline1 is_startline2 is_startline3 
+  is_startline num_chang num_shizi_chang shorter_line sum_zhidao num_zhidao 
+  need_cut_speed CurrentSpeed CSpeedArray PWM StraightSpeed CurveSpeed angle 
+  send test zhidao_speed shizi_speed refer_speed limit_speed is_use_start 
+  big_left little_right sum_little_angle sum_cut aver_pwm num_pwm 
+  flag_use_special_cutspeed sum_wandao MyPID Status_Flag Status_Value 
+SECTION: ".abs_section_fff2"
+  _Vector_6 
+
+*********************************************************************************************
+OBJECT LIST SORTED BY ADDRESS
+     Name                                      Addr   hSize   dSize     Ref    Section   RLIB
+---------------------------------------------------------------------------------------------
+     _PORTAB                                      0       2       2       1   .abs_section_0
+     _DDRAB                                       2       2       2       1   .abs_section_2
+     _PORTE                                       8       1       1       0   .abs_section_8
+     _DDRE                                        9       1       1       0   .abs_section_9
+     _MODE                                        B       1       1       0   .abs_section_b
+     _PUCR                                        C       1       1       0   .abs_section_c
+     _RDRIV                                       D       1       1       0   .abs_section_d
+     _GPAGE                                      10       1       1       0   .abs_section_10
+     _DIRECT                                     11       1       1       0   .abs_section_11
+     _MMCCTL1                                    13       1       1       0   .abs_section_13
+     _PPAGE                                      15       1       1       0   .abs_section_15
+     _RPAGE                                      16       1       1       0   .abs_section_16
+     _EPAGE                                      17       1       1       0   .abs_section_17
+     _PARTID                                     1A       2       2       0   .abs_section_1a
+     _ECLKCTL                                    1C       1       1       0   .abs_section_1c
+     _IRQCR                                      1E       1       1       1   .abs_section_1e
+     _DBGC1                                      20       1       1       0   .abs_section_20
+     _DBGSR                                      21       1       1       0   .abs_section_21
+     _DBGTCR                                     22       1       1       0   .abs_section_22
+     _DBGC2                                      23       1       1       0   .abs_section_23
+     _DBGTB                                      24       2       2       0   .abs_section_24
+     _DBGCNT                                     26       1       1       0   .abs_section_26
+     _DBGSCRX                                    27       1       1       0   .abs_section_27
+     _DBGXCTL                                    28       1       1       0   .abs_section_28
+     _DBGXAH                                     29       1       1       0   .abs_section_29
+     _DBGXAM                                     2A       1       1       0   .abs_section_2a
+     _DBGXAL                                     2B       1       1       0   .abs_section_2b
+     _DBGXDH                                     2C       1       1       0   .abs_section_2c
+     _DBGXDL                                     2D       1       1       0   .abs_section_2d
+     _DBGXDHM                                    2E       1       1       0   .abs_section_2e
+     _DBGXDLM                                    2F       1       1       0   .abs_section_2f
+     _PORTK                                      32       1       1       0   .abs_section_32
+     _DDRK                                       33       1       1       0   .abs_section_33
+     _SYNR                                       34       1       1       1   .abs_section_34
+     _REFDV                                      35       1       1       1   .abs_section_35
+     _POSTDIV                                    36       1       1       1   .abs_section_36
+     _CRGFLG                                     37       1       1       1   .abs_section_37
+     _CRGINT                                     38       1       1       0   .abs_section_38
+     _CLKSEL                                     39       1       1       2   .abs_section_39
+     _PLLCTL                                     3A       1       1       1   .abs_section_3a
+     _RTICTL                                     3B       1       1       0   .abs_section_3b
+     _COPCTL                                     3C       1       1       0   .abs_section_3c
+     _ARMCOP                                     3F       1       1       0   .abs_section_3f
+     _TIOS                                       40       1       1       1   .abs_section_40
+     _CFORC                                      41       1       1       0   .abs_section_41
+     _OC7M                                       42       1       1       0   .abs_section_42
+     _OC7D                                       43       1       1       0   .abs_section_43
+     _TCNT                                       44       2       2       0   .abs_section_44
+     _TSCR1                                      46       1       1       1   .abs_section_46
+     _TTOV                                       47       1       1       0   .abs_section_47
+     _TCTL1                                      48       1       1       0   .abs_section_48
+     _TCTL2                                      49       1       1       0   .abs_section_49
+     _TCTL3                                      4A       1       1       2   .abs_section_4a
+     _TCTL4                                      4B       1       1       6   .abs_section_4b
+     _TIE                                        4C       1       1      10   .abs_section_4c
+     _TSCR2                                      4D       1       1       1   .abs_section_4d
+     _TFLG1                                      4E       1       1       7   .abs_section_4e
+     _TFLG2                                      4F       1       1       0   .abs_section_4f
+     _TC0                                        50       2       2       0   .abs_section_50
+     _TC1                                        52       2       2       0   .abs_section_52
+     _TC2                                        54       2       2       0   .abs_section_54
+     _TC3                                        56       2       2       0   .abs_section_56
+     _TC4                                        58       2       2       0   .abs_section_58
+     _TC5                                        5A       2       2       0   .abs_section_5a
+     _TC6                                        5C       2       2       0   .abs_section_5c
+     _TC7                                        5E       2       2       0   .abs_section_5e
+     _PACTL                                      60       1       1       1   .abs_section_60
+     _PAFLG                                      61       1       1       0   .abs_section_61
+     _PACNT                                      62       2       2       3   .abs_section_62
+     _OCPD                                       6C       1       1       0   .abs_section_6c
+     _PTPSR                                      6E       1       1       0   .abs_section_6e
+     _SCI0BD                                     C8       2       2       0   .abs_section_c8
+     _SCI0ACR2                                   CA       1       1       0   .abs_section_ca
+     _SCI0CR2                                    CB       1       1       0   .abs_section_cb
+     _SCI0SR1                                    CC       1       1       0   .abs_section_cc
+     _SCI0SR2                                    CD       1       1       0   .abs_section_cd
+     _SCI0DRH                                    CE       1       1       0   .abs_section_ce
+     _SCI0DRL                                    CF       1       1       0   .abs_section_cf
+     _SCI1BD                                     D0       2       2       0   .abs_section_d0
+     _SCI1ACR2                                   D2       1       1       0   .abs_section_d2
+     _SCI1CR2                                    D3       1       1       0   .abs_section_d3
+     _SCI1SR1                                    D4       1       1       0   .abs_section_d4
+     _SCI1SR2                                    D5       1       1       0   .abs_section_d5
+     _SCI1DRH                                    D6       1       1       0   .abs_section_d6
+     _SCI1DRL                                    D7       1       1       0   .abs_section_d7
+     _SPI0CR1                                    D8       1       1       0   .abs_section_d8
+     _SPI0CR2                                    D9       1       1       0   .abs_section_d9
+     _SPI0BR                                     DA       1       1       0   .abs_section_da
+     _SPI0SR                                     DB       1       1       2   .abs_section_db
+     _SPI0DR                                     DC       2       2       2   .abs_section_dc
+     _FCLKDIV                                   100       1       1       0   .abs_section_100
+     _FSEC                                      101       1       1       0   .abs_section_101
+     _FCCOBIX                                   102       1       1       0   .abs_section_102
+     _FECCRIX                                   103       1       1       0   .abs_section_103
+     _FCNFG                                     104       1       1       0   .abs_section_104
+     _FERCNFG                                   105       1       1       0   .abs_section_105
+     _FSTAT                                     106       1       1       0   .abs_section_106
+     _FERSTAT                                   107       1       1       0   .abs_section_107
+     _FPROT                                     108       1       1       0   .abs_section_108
+     _DFPROT                                    109       1       1       0   .abs_section_109
+     _FCCOB                                     10A       2       2       0   .abs_section_10a
+     _FECCR                                     10E       2       2       0   .abs_section_10e
+     _FOPT                                      110       1       1       0   .abs_section_110
+     _IVBR                                      121       1       1       0   .abs_section_121
+     _INT_XGPRIO                                126       1       1       0   .abs_section_126
+     _INT_CFADDR                                127       1       1       0   .abs_section_127
+     _INT_CFDATA0                               128       1       1       0   .abs_section_128
+     _INT_CFDATA1                               129       1       1       0   .abs_section_129
+     _INT_CFDATA2                               12A       1       1       0   .abs_section_12a
+     _INT_CFDATA3                               12B       1       1       0   .abs_section_12b
+     _INT_CFDATA4                               12C       1       1       0   .abs_section_12c
+     _INT_CFDATA5                               12D       1       1       0   .abs_section_12d
+     _INT_CFDATA6                               12E       1       1       0   .abs_section_12e
+     _INT_CFDATA7                               12F       1       1       0   .abs_section_12f
+     _CAN0CTL0                                  140       1       1       0   .abs_section_140
+     _CAN0CTL1                                  141       1       1       0   .abs_section_141
+     _CAN0BTR0                                  142       1       1       0   .abs_section_142
+     _CAN0BTR1                                  143       1       1       0   .abs_section_143
+     _CAN0RFLG                                  144       1       1       0   .abs_section_144
+     _CAN0RIER                                  145       1       1       0   .abs_section_145
+     _CAN0TFLG                                  146       1       1       0   .abs_section_146
+     _CAN0TIER                                  147       1       1       0   .abs_section_147
+     _CAN0TARQ                                  148       1       1       0   .abs_section_148
+     _CAN0TAAK                                  149       1       1       0   .abs_section_149
+     _CAN0TBSEL                                 14A       1       1       0   .abs_section_14a
+     _CAN0IDAC                                  14B       1       1       0   .abs_section_14b
+     _CAN0MISC                                  14D       1       1       0   .abs_section_14d
+     _CAN0RXERR                                 14E       1       1       0   .abs_section_14e
+     _CAN0TXERR                                 14F       1       1       0   .abs_section_14f
+     _CAN0IDAR0                                 150       1       1       0   .abs_section_150
+     _CAN0IDAR1                                 151       1       1       0   .abs_section_151
+     _CAN0IDAR2                                 152       1       1       0   .abs_section_152
+     _CAN0IDAR3                                 153       1       1       0   .abs_section_153
+     _CAN0IDMR0                                 154       1       1       0   .abs_section_154
+     _CAN0IDMR1                                 155       1       1       0   .abs_section_155
+     _CAN0IDMR2                                 156       1       1       0   .abs_section_156
+     _CAN0IDMR3                                 157       1       1       0   .abs_section_157
+     _CAN0IDAR4                                 158       1       1       0   .abs_section_158
+     _CAN0IDAR5                                 159       1       1       0   .abs_section_159
+     _CAN0IDAR6                                 15A       1       1       0   .abs_section_15a
+     _CAN0IDAR7                                 15B       1       1       0   .abs_section_15b
+     _CAN0IDMR4                                 15C       1       1       0   .abs_section_15c
+     _CAN0IDMR5                                 15D       1       1       0   .abs_section_15d
+     _CAN0IDMR6                                 15E       1       1       0   .abs_section_15e
+     _CAN0IDMR7                                 15F       1       1       0   .abs_section_15f
+     _CAN0RXIDR0                                160       1       1       0   .abs_section_160
+     _CAN0RXIDR1                                161       1       1       0   .abs_section_161
+     _CAN0RXIDR2                                162       1       1       0   .abs_section_162
+     _CAN0RXIDR3                                163       1       1       0   .abs_section_163
+     _CAN0RXDSR0                                164       1       1       0   .abs_section_164
+     _CAN0RXDSR1                                165       1       1       0   .abs_section_165
+     _CAN0RXDSR2                                166       1       1       0   .abs_section_166
+     _CAN0RXDSR3                                167       1       1       0   .abs_section_167
+     _CAN0RXDSR4                                168       1       1       0   .abs_section_168
+     _CAN0RXDSR5                                169       1       1       0   .abs_section_169
+     _CAN0RXDSR6                                16A       1       1       0   .abs_section_16a
+     _CAN0RXDSR7                                16B       1       1       0   .abs_section_16b
+     _CAN0RXDLR                                 16C       1       1       0   .abs_section_16c
+     _CAN0RXTSR                                 16E       2       2       0   .abs_section_16e
+     _CAN0TXIDR0                                170       1       1       0   .abs_section_170
+     _CAN0TXIDR1                                171       1       1       0   .abs_section_171
+     _CAN0TXIDR2                                172       1       1       0   .abs_section_172
+     _CAN0TXIDR3                                173       1       1       0   .abs_section_173
+     _CAN0TXDSR0                                174       1       1       0   .abs_section_174
+     _CAN0TXDSR1                                175       1       1       0   .abs_section_175
+     _CAN0TXDSR2                                176       1       1       0   .abs_section_176
+     _CAN0TXDSR3                                177       1       1       0   .abs_section_177
+     _CAN0TXDSR4                                178       1       1       0   .abs_section_178
+     _CAN0TXDSR5                                179       1       1       0   .abs_section_179
+     _CAN0TXDSR6                                17A       1       1       0   .abs_section_17a
+     _CAN0TXDSR7                                17B       1       1       0   .abs_section_17b
+     _CAN0TXDLR                                 17C       1       1       0   .abs_section_17c
+     _CAN0TXTBPR                                17D       1       1       0   .abs_section_17d
+     _CAN0TXTSR                                 17E       2       2       0   .abs_section_17e
+     _PTT                                       240       1       1       0   .abs_section_240
+     _PTIT                                      241       1       1       0   .abs_section_241
+     _DDRT                                      242       1       1       0   .abs_section_242
+     _RDRT                                      243       1       1       0   .abs_section_243
+     _PERT                                      244       1       1       0   .abs_section_244
+     _PPST                                      245       1       1       0   .abs_section_245
+     _PTTRR                                     247       1       1       0   .abs_section_247
+     _PTS                                       248       1       1       0   .abs_section_248
+     _PTIS                                      249       1       1       0   .abs_section_249
+     _DDRS                                      24A       1       1       0   .abs_section_24a
+     _RDRS                                      24B       1       1       0   .abs_section_24b
+     _PERS                                      24C       1       1       0   .abs_section_24c
+     _PPSS                                      24D       1       1       0   .abs_section_24d
+     _WOMS                                      24E       1       1       0   .abs_section_24e
+     _PTM                                       250       1       1       6   .abs_section_250
+     _PTIM                                      251       1       1       0   .abs_section_251
+     _DDRM                                      252       1       1       0   .abs_section_252
+     _RDRM                                      253       1       1       0   .abs_section_253
+     _PERM                                      254       1       1       0   .abs_section_254
+     _PPSM                                      255       1       1       0   .abs_section_255
+     _WOMM                                      256       1       1       0   .abs_section_256
+     _MODRR                                     257       1       1       0   .abs_section_257
+     _PTP                                       258       1       1       1   .abs_section_258
+     _PTIP                                      259       1       1       0   .abs_section_259
+     _DDRP                                      25A       1       1       1   .abs_section_25a
+     _RDRP                                      25B       1       1       0   .abs_section_25b
+     _PERP                                      25C       1       1       0   .abs_section_25c
+     _PPSP                                      25D       1       1       0   .abs_section_25d
+     _PIEP                                      25E       1       1       0   .abs_section_25e
+     _PIFP                                      25F       1       1       0   .abs_section_25f
+     _PTH                                       260       1       1       0   .abs_section_260
+     _PTIH                                      261       1       1       0   .abs_section_261
+     _DDRH                                      262       1       1       0   .abs_section_262
+     _RDRH                                      263       1       1       0   .abs_section_263
+     _PERH                                      264       1       1       0   .abs_section_264
+     _PPSH                                      265       1       1       0   .abs_section_265
+     _PIEH                                      266       1       1       0   .abs_section_266
+     _PIFH                                      267       1       1       0   .abs_section_267
+     _PTJ                                       268       1       1       0   .abs_section_268
+     _PTIJ                                      269       1       1       0   .abs_section_269
+     _DDRJ                                      26A       1       1       0   .abs_section_26a
+     _RDRJ                                      26B       1       1       0   .abs_section_26b
+     _PERJ                                      26C       1       1       0   .abs_section_26c
+     _PPSJ                                      26D       1       1       0   .abs_section_26d
+     _PIEJ                                      26E       1       1       0   .abs_section_26e
+     _PIFJ                                      26F       1       1       0   .abs_section_26f
+     _PT01AD0                                   270       2       2      12   .abs_section_270
+     _DDR01AD0                                  272       2       2       3   .abs_section_272
+     _RDR01AD0                                  274       2       2       0   .abs_section_274
+     _PER01AD0                                  276       2       2       0   .abs_section_276
+     _ATD0CTL01                                 2C0       2       2       0   .abs_section_2c0
+     _ATD0CTL23                                 2C2       2       2       0   .abs_section_2c2
+     _ATD0CTL45                                 2C4       2       2       0   .abs_section_2c4
+     _ATD0STAT0                                 2C6       1       1       0   .abs_section_2c6
+     _ATD0CMPE                                  2C8       2       2       0   .abs_section_2c8
+     _ATD0STAT2                                 2CA       2       2       0   .abs_section_2ca
+     _ATD0DIEN                                  2CC       2       2       1   .abs_section_2cc
+     _ATD0CMPHT                                 2CE       2       2       0   .abs_section_2ce
+     _ATD0DR0                                   2D0       2       2       0   .abs_section_2d0
+     _ATD0DR1                                   2D2       2       2       0   .abs_section_2d2
+     _ATD0DR2                                   2D4       2       2       0   .abs_section_2d4
+     _ATD0DR3                                   2D6       2       2       0   .abs_section_2d6
+     _ATD0DR4                                   2D8       2       2       0   .abs_section_2d8
+     _ATD0DR5                                   2DA       2       2       0   .abs_section_2da
+     _ATD0DR6                                   2DC       2       2       0   .abs_section_2dc
+     _ATD0DR7                                   2DE       2       2       0   .abs_section_2de
+     _ATD0DR8                                   2E0       2       2       0   .abs_section_2e0
+     _ATD0DR9                                   2E2       2       2       0   .abs_section_2e2
+     _ATD0DR10                                  2E4       2       2       0   .abs_section_2e4
+     _ATD0DR11                                  2E6       2       2       0   .abs_section_2e6
+     _ATD0DR12                                  2E8       2       2       0   .abs_section_2e8
+     _ATD0DR13                                  2EA       2       2       0   .abs_section_2ea
+     _ATD0DR14                                  2EC       2       2       0   .abs_section_2ec
+     _ATD0DR15                                  2EE       2       2       0   .abs_section_2ee
+     _VREGHTCL                                  2F0       1       1       0   .abs_section_2f0
+     _VREGCTRL                                  2F1       1       1       0   .abs_section_2f1
+     _VREGAPICL                                 2F2       1       1       0   .abs_section_2f2
+     _VREGAPITR                                 2F3       1       1       0   .abs_section_2f3
+     _VREGAPIR                                  2F4       2       2       0   .abs_section_2f4
+     _VREGHTTR                                  2F7       1       1       0   .abs_section_2f7
+     _PWME                                      300       1       1      14   .abs_section_300
+     _PWMPOL                                    301       1       1       1   .abs_section_301
+     _PWMCLK                                    302       1       1       1   .abs_section_302
+     _PWMPRCLK                                  303       1       1       1   .abs_section_303
+     _PWMCAE                                    304       1       1       1   .abs_section_304
+     _PWMCTL                                    305       1       1       1   .abs_section_305
+     _PWMSCLA                                   308       1       1       1   .abs_section_308
+     _PWMSCLB                                   309       1       1       1   .abs_section_309
+     _PWMCNT01                                  30C       2       2       0   .abs_section_30c
+     _PWMCNT23                                  30E       2       2       0   .abs_section_30e
+     _PWMCNT45                                  310       2       2       0   .abs_section_310
+     _PWMCNT67                                  312       2       2       0   .abs_section_312
+     _PWMPER01                                  314       2       2       1   .abs_section_314
+     _PWMPER23                                  316       2       2       1   .abs_section_316
+     _PWMPER45                                  318       2       2       0   .abs_section_318
+     _PWMPER67                                  31A       2       2       1   .abs_section_31a
+     _PWMDTY01                                  31C       2       2       1   .abs_section_31c
+     _PWMDTY23                                  31E       2       2       3   .abs_section_31e
+     _PWMDTY45                                  320       2       2       0   .abs_section_320
+     _PWMDTY67                                  322       2       2       8   .abs_section_322
+     _PWMSDN                                    324       1       1       0   .abs_section_324
+     _PITCFLMT                                  340       1       1       5   .abs_section_340
+     _PITFLT                                    341       1       1       1   .abs_section_341
+     _PITCE                                     342       1       1       2   .abs_section_342
+     _PITMUX                                    343       1       1       2   .abs_section_343
+     _PITINTE                                   344       1       1       2   .abs_section_344
+     _PITTF                                     345       1       1       1   .abs_section_345
+     _PITMTLD0                                  346       1       1       1   .abs_section_346
+     _PITMTLD1                                  347       1       1       1   .abs_section_347
+     _PITLD0                                    348       2       2       1   .abs_section_348
+     _PITCNT0                                   34A       2       2       0   .abs_section_34a
+     _PITLD1                                    34C       2       2       1   .abs_section_34c
+     _PITCNT1                                   34E       2       2       2   .abs_section_34e
+     _PITLD2                                    350       2       2       0   .abs_section_350
+     _PITCNT2                                   352       2       2       0   .abs_section_352
+     _PITLD3                                    354       2       2       0   .abs_section_354
+     _PITCNT3                                   356       2       2       0   .abs_section_356
+     quan                                      2100      64     100       1   .data       
+     cmos                                      2164      32      50       1   .data       
+     OutputSpeed                               2196       2       2       5   .bss        
+     CSpeedArraySum                            2198       2       2       2   .bss        
+     CSpeedArraySum1                           219A       2       2       3   .bss        
+     Rx_Buf                                    219C       1       1       1   .bss        
+     numb_cmos                                 219D       1       1       3   .common     
+     v_point_up                                219E     12C     300      49   .common     
+     v_point_down                              22CA     12C     300      42   .common     
+     use_ad_con                                23F6       1       1       2   .common     
+     pre_e0                                    23F7       1       1       1   .common     
+     Flag_Up                                   23F8       1       1       5   .common     
+     Flag_Down                                 23F9       1       1       5   .common     
+     Line_CCD                                  23FA       2       2       5   .common     
+     Line_Save                                 23FC       1       1      11   .common     
+     PITCNT1temp                               23FD       2       2       4   .common     
+     Pre_Line_Save                             23FF       1       1      85   .common     
+     pt_left                                   2400       2       2       1   .common     
+     pt_right                                  2402       2       2       1   .common     
+     pangle_left                               2404       2       2       1   .common     
+     pangle_right                              2406       2       2       1   .common     
+     pt_left_line                              2408       1       1       1   .common     
+     pt_right_line                             2409       1       1       1   .common     
+     will_be_out                               240A       1       1       1   .common     
+     will_be_out_left                          240B       1       1       2   .common     
+     will_be_out_right                         240C       1       1       2   .common     
+     sum_Block                                 240D       2       2       4   .common     
+     point_up                                  240F      3C      60      40   .common     
+     point_down                                244B      3C      60      42   .common     
+     p_point_up                                2487      78     120      23   .common     
+     p_point_down                              24FF      78     120      27   .common     
+     stop_find_right                           2577       1       1      15   .common     
+     stop_find_left                            2578       1       1      15   .common     
+     Flag_Lose_Line                            2579       1       1       6   .common     
+     is_find_a_real_start                      257A       1       1       6   .common     
+     not_find_a_real_start                     257B       1       1       4   .common     
+     num_wrong_left                            257C       1       1      13   .common     
+     num_wrong_right                           257D       1       1      13   .common     
+     End_Line                                  257E       2       2       1   .common     
+     num_find                                  2580       1       1       4   .common     
+     num_shizi                                 2581       1       1       6   .common     
+     flag_shizi                                2582       1       1      11   .common     
+     flag_not_shizi                            2583       1       1       3   .common     
+     stright_flag                              2584       1       1       1   .common     
+     stright                                   2585       2       2       3   .common     
+     flag_find_aftershizi                      2587       1       1      10   .common     
+     is_have_a_lstl                            2588       1       1       5   .common     
+     is_have_a_rstl                            2589       1       1       5   .common     
+     find_left_startline                       258A       1       1      56   .common     
+     find_right_startline                      258B       1       1      52   .common     
+     pfind_left_startline                      258C       1       1      14   .common     
+     pfind_right_startline                     258D       1       1      17   .common     
+     left_stratline                            258E       1       1      33   .common     
+     right_startline                           258F       1       1      39   .common     
+     pleft_endline                             2590       1       1       3   .common     
+     pright_endline                            2591       1       1       4   .common     
+     find_last_lstl                            2592       1       1      15   .common     
+     find_last_rstl                            2593       1       1      17   .common     
+     pre_left_stl                              2594       1       1       1   .common     
+     pre_right_stl                             2595       1       1       1   .common     
+     pre_left_stl_error                        2596       1       1       5   .common     
+     pre_right_stl_error                       2597       1       1       5   .common     
+     last_stl                                  2598       1       1       6   .common     
+     error                                     2599       4       4      17   .common     
+     SteerAngle0                               259D       4       4      10   .common     
+     SteerAngle1                               25A1       4       4       4   .common     
+     SteerAngle                                25A5       4       4      48   .common     
+     p_SteerAngle0                             25A9       4       4      17   .common     
+     pre_SteerAngle                            25AD       4       4       2   .common     
+     now_pwmdty67                              25B1       2       2       2   .common     
+     xiuzheng_error                            25B3       2       2       4   .common     
+     mid_error                                 25B5       2       2       4   .common     
+     start_error                               25B7       2       2       1   .common     
+     x                                         25B9       1       1       4   .common     
+     is_odd                                    25BA       1       1       3   .common     
+     x_error                                   25BB       2       2       5   .common     
+     pre_x_error                               25BD       2       2       2   .common     
+     ee_x_error                                25BF       2       2       1   .common     
+     dian_sha                                  25C1       1       1       1   .common     
+     left_block0                               25C2       2       2      49   .common     
+     right_block0                              25C4       2       2      42   .common     
+     find_left                                 25C6       1       1      35   .common     
+     find_right                                25C7       1       1      32   .common     
+     find_last_left                            25C8       1       1       3   .common     
+     find_last_right                           25C9       1       1       3   .common     
+     left_endline                              25CA       1       1      50   .common     
+     right_endline                             25CB       1       1      52   .common     
+     num_onlyfind_one_startline                25CC       1       1       1   .common     
+     test_error                                25CD       1       1       2   .common     
+     valium                                    25CE       1       1       5   .common     
+     mid_valium                                25CF       1       1       2   .common     
+     turn_left                                 25D0       1       1       4   .common     
+     turn_right                                25D1       1       1       4   .common     
+     condition_1                               25D2       1       1       2   .common     
+     condition_2                               25D3       1       1       2   .common     
+     condition_3                               25D4       1       1       2   .common     
+     condition_4                               25D5       1       1       2   .common     
+     condition_5                               25D6       1       1       2   .common     
+     condition_6                               25D7       1       1       2   .common     
+     condition_7                               25D8       1       1       2   .common     
+     condition_8                               25D9       1       1       2   .common     
+     condition_9                               25DA       1       1       2   .common     
+     condition_10                              25DB       1       1       2   .common     
+     condition_11                              25DC       1       1       2   .common     
+     condition_12                              25DD       1       1       2   .common     
+     condition_13                              25DE       1       1       3   .common     
+     condition_14                              25DF       1       1       2   .common     
+     condition_15                              25E0       1       1       2   .common     
+     condition_16                              25E1       1       1       2   .common     
+     condition_17                              25E2       1       1       2   .common     
+     condition_18                              25E3       1       1       2   .common     
+     condition_19                              25E4       1       1       2   .common     
+     condition_20                              25E5       1       1       1   .common     
+     test_left_stl                             25E6       1       1       2   .common     
+     test_right_stl                            25E7       1       1       2   .common     
+     test_left                                 25E8       1       1       2   .common     
+     test_right                                25E9       1       1       2   .common     
+     test_a                                    25EA       1       1       6   .common     
+     test_b                                    25EB       1       1       5   .common     
+     test_stl_error                            25EC       1       1       2   .common     
+     test_str_error                            25ED       1       1       2   .common     
+     test_c                                    25EE       1       1       1   .common     
+     test_d                                    25EF       1       1       1   .common     
+     test_flag_shizi                           25F0       1       1       2   .common     
+     test_sum                                  25F1       4       4       2   .common     
+     flag_ed                                   25F5       1       1       3   .common     
+     test_aa_lstl                              25F6       1       1       2   .common     
+     test_aa_rstl                              25F7       1       1       2   .common     
+     test_bbhh                                 25F8       1       1       2   .common     
+     is_startline1                             25F9       1       1       2   .common     
+     is_startline2                             25FA       1       1       4   .common     
+     is_startline3                             25FB       1       1       2   .common     
+     is_startline                              25FC       1       1       3   .common     
+     num_chang                                 25FD       2       2       7   .common     
+     num_shizi_chang                           25FF       2       2       9   .common     
+     shorter_line                              2601       1       1       4   .common     
+     sum_zhidao                                2602       2       2      16   .common     
+     num_zhidao                                2604       1       1       7   .common     
+     need_cut_speed                            2605       1       1       1   .common     
+     CurrentSpeed                              2606       2       2       6   .common     
+     CSpeedArray                               2608       A      10       5   .common     
+     PWM                                       2612       2       2       1   .common     
+     StraightSpeed                             2614       2       2       2   .common     
+     CurveSpeed                                2616       2       2       3   .common     
+     angle                                     2618       2       2       5   .common     
+     send                                      261A       1       1       1   .common     
+     test                                      261B       2       2       2   .common     
+     zhidao_speed                              261D       2       2      10   .common     
+     shizi_speed                               261F       2       2       4   .common     
+     refer_speed                               2621       2       2       4   .common     
+     limit_speed                               2623       2       2       4   .common     
+     is_use_start                              2625       1       1       3   .common     
+     big_left                                  2626       1       1       4   .common     
+     little_right                              2627       1       1       4   .common     
+     sum_little_angle                          2628       1       1       5   .common     
+     sum_cut                                   2629       1       1       1   .common     
+     aver_pwm                                  262A       4       4      10   .common     
+     num_pwm                                   262E       4       4      10   .common     
+     flag_use_special_cutspeed                 2632       1       1       3   .common     
+     sum_wandao                                2633       1       1       7   .common     
+     MyPID                                     2634      14      20      43   .common     
+     Status_Flag                               2648       1       1       2   .common     
+     Status_Value                              2649       1       1       4   .common     
+     _Startup                                  C000       F      15       0   .init       
+     field_interrupt                           C019      24      36       1   NON_BANKED  
+     odd_even_interrupt                        C03D       4       4       1   NON_BANKED  
+     row_interrupt                             C041      9F     159       1   NON_BANKED  
+     rising_interrupt                          C0E0      35      53       1   NON_BANKED  
+     falling_interrupt                         C115      35      53       1   NON_BANKED  
+     testt                                     C14A       B      11       1   NON_BANKED  
+     _BDIVMODU                                 C155       A      10       1   NON_BANKED  
+     _LSHRS                                    C15F       E      14       2   NON_BANKED  
+     _LCMP                                     C16D       A      10       2   NON_BANKED  
+     _LNEG                                     C177       9       9       1   NON_BANKED  
+     _LINC                                     C180       5       5       1   NON_BANKED  
+     _LMULS16x32                               C185      1C      28       3   NON_BANKED  
+     _lDivMod                                  C1A1      B9     185       3   NON_BANKED  
+     _LDIVU                                    C25A       E      14       2   NON_BANKED  
+     _NEG_P                                    C268       C      12       4   NON_BANKED  
+     _LDIVS                                    C274      35      53       3   NON_BANKED  
+     IRQ_ISR                                   C2A9      48      72       1   NON_BANKED  
+     _Vector_66                                FF7A       2       2       0   .abs_section_ff7a
+     _Vector_12                                FFE6       2       2       0   .abs_section_ffe6
+     _Vector_11                                FFE8       2       2       0   .abs_section_ffe8
+     _Vector_10                                FFEA       2       2       0   .abs_section_ffea
+     _Vector_9                                 FFEC       2       2       0   .abs_section_ffec
+     _Vector_8                                 FFEE       2       2       0   .abs_section_ffee
+     _Vector_6                                 FFF2       2       2       0   .abs_section_fff2
+     PIDInit                                 FE8000      19      25       2   .text       
+     PIDCalculate                            FE8019      68     104       2   .text       
+     get_current_speed                       FE8081      59      89       2   .text       
+     speed_ctl                               FE80DA      A6     166       2   .text       
+     pto_get_sumblock                        FE8180     230     560      26   .text       
+     find_edge                               FE83B0      7C     124       2   .text       
+     is_will_be_out                          FE842C     1E7     487      23   .text       
+     pnew_duoji_control                      FE8613     641    1601      68   .text       
+     duoji_control                           FE8C54     1AE     430       4   .text       
+     enstart_duoji                           FE8E02      53      83       2   .text       
+     clear_this_field_flag                   FE8E55      75     117       4   .text       
+     select_speed                            FE8ECA      93     147       2   .text       
+     set_speed                               FE8F5D     37A     890      25   .text       
+     cabs_uchar                              FE92D7       6       6      42   .text       
+     init_all                                FE92DD      2B      43       2   .text       
+     is_shizi                                FE9308     163     355       7   .text       
+     is_the_startline                        FE946B      D7     215       4   .text       
+     to_find_both_startline_new              FE9542     202     514      15   .text       
+     to_find_both_line_new                   FE9744     188     392       7   .text       
+     to_find_both_startline                  FE98CC     192     402      10   .text       
+     to_find_left_startline                  FE9A5E      6C     108       4   .text       
+     to_find_right_startline                 FE9ACA      6C     108       4   .text       
+     get_path_left                           FE9B36      7E     126      14   .text       
+     get_path_right                          FE9BB4      80     128      14   .text       
+     to_save_thisfield_state                 FE9C34      2F      47       2   .text       
+     getline_when_shizi                      FE9C63      61      97       4   .text       
+     to_save_this_hang_state                 FE9CC4       D      13       2   .text       
+     bvbo_when_no_real_start                 FE9CD1     438    1080      42   .text       
+     lvbo                                    FEA109     6CB    1739     122   .text       
+     car_control_after_a_field               FEA7D4      AF     175       2   .text       
+     how_to_do_when_shizi                    FEA883      E7     231       4   .text       
+     main                                    FEA96A     114     276       3   .text       
+     Init                                    FEAA7E      29      41       2   .text       
+     PLL_Init                                FEAAA7      1A      26       2   .text       
+     PIT_Init                                FEAAC1      20      32       2   .text       
+     ECT0_init                               FEAAE1      38      56       2   .text       
+     ECT_Init                                FEAB19       9       9       2   .text       
+     PWM_Init                                FEAB22      59      89       2   .text       
+     PIT1_init                               FEAB7B      20      32       2   .text       
+     Dial_Switch_init                        FEAB9B       D      13       2   .text       
+     SPI_Write_Byte                          FEABA8      12      18      12   .text       
+     SPI_RW_Reg                              FEABBA      19      25       4   .text       
+     SPI_Read_Byte                           FEABD3      12      18       2   .text       
+     SPI_Read_Buf                            FEABE5      2C      44       2   .text       
+
+*********************************************************************************************
+UNUSED-OBJECTS SECTION
+---------------------------------------------------------------------------------------------
+NOT USED PROCEDURES
+main.c.o:
+  SCI0Tx255 SCI0Tx1Fld1 cabs_uint cabs_char Init_sd to_start_or_stop 
+rtshc12.c.o (ansixbi.lib):
+  _BSHL _BSHRS _BSHRU _BDIVMODS _ISHL _ISHRU _ISHRS _LSHL _LSHRU _LADD _LSUB 
+  _LAND _LOR _LXOR _LCMP_P _LCMP_PP _LCOM _LDEC _LMUL _LMULU16x32 _LMODU _LMODS 
+  _ILSEXT _COPY _CASE_DIRECT _CASE_DIRECT_BYTE _CASE_CHECKED _CASE_CHECKED_BYTE 
+  _CASE_SEARCH _CASE_SEARCH_BYTE _CASE_SEARCH_8 _CASE_SEARCH_8_BYTE _FCALL 
+  _FPCMP _PADD _PSUB _PINC _PDEC 
+nRF24L01.c.o:
+  Delay_02 SPI_Init nRF24L01_IOInit SPI_Write_Buf RX_Mode TX_Mode 
+  nRF24L01_Config nRF24L01Init Wireless_Send_Byte Wireless_Send_Buf 
+  Wireless_Send_IntNumBuf 
+NOT USED VARIABLES
+main.c.o:
+  en_speed now_e0 test_numbL test_x_error_num x1 x2 x3 y1 y2 y3 s_abc ab bc ac 
+  temp_aa temp_bb temp_cc radius temp_test test_abs test_char flag_q 
+  is_startline4 ped_tspeed test1 
+rtshc12.c.o (ansixbi.lib):
+  _PowOfTwo_8 _PowOfTwo_16 _PowOfTwo_32 errno 
+nRF24L01.c.o:
+  TX_ADDRESS Tx_Buf 
+
+*********************************************************************************************
+COPYDOWN SECTION
+---------------------------------------------------------------------------------------------
+------- ROM-ADDRESS: 0xC2F1 ---- SIZE       4 ---
+Filling bytes inserted
+ 00952101
+------- ROM-ADDRESS: 0xC2F5 ---- RAM-ADDRESS: 0x2101 ---- SIZE      99 ---
+Name of initialized Object : quan:1
+ 0E000E000E 000E000E00 0F000F000F
+ 000F000F00 1400140014 0014001400
+ 0F000F000E 000E000E00 0B000B000B
+ 000B000B00 0A000A000A 000A000A00
+ 0A000A000A 000A000A00 0A000A000A
+ 000A000A00 0500050005 0005000500
+ 0500050005 00050005
+------- ROM-ADDRESS: 0xC358 ---- RAM-ADDRESS: 0x2164 ---- SIZE      50 ---
+Name of initialized Object : cmos
+ 18212A333C 45505A646B 6F73777B7F
+ 838587898C 8E9197999B 9DA0A3A6AA
+ ACAEB0B1B3 B5B7B9BBBD BFC0C1C2C3
+ C4C5C6C7C8
+------- ROM-ADDRESS: 0xC38A ---- SIZE       2 ---
+Filling bytes inserted
+ 0000
+
+*********************************************************************************************
+OBJECT-DEPENDENCIES SECTION
+---------------------------------------------------------------------------------------------
+_Startup                  USES __SEG_END_SSTACK Init main 
+field_interrupt           USES _TFLG1 numb_cmos _TIE v_point_up v_point_down 
+                                point_up point_down 
+odd_even_interrupt        USES _TFLG1 
+row_interrupt             USES _TFLG1 _PITCFLMT _PITFLT _TIE Flag_Up Flag_Down 
+                                Line_CCD numb_cmos cmos Line_Save clear_this_field_flag 
+                                v_point_up v_point_down point_up point_down Pre_Line_Save 
+                                p_point_up p_point_down 
+rising_interrupt          USES _TFLG1 _PITCNT1 PITCNT1temp Flag_Down Flag_Up 
+                                Line_Save v_point_up 
+falling_interrupt         USES _TFLG1 _PITCNT1 PITCNT1temp Flag_Down Flag_Up 
+                                Line_Save v_point_down 
+testt                     USES _PITTF speed_ctl 
+_LMULS16x32               USES _LNEG 
+_LDIVU                    USES _lDivMod 
+_LDIVS                    USES _NEG_P _lDivMod 
+IRQ_ISR                   USES SPI_Read_Byte Status_Value Status_Flag Rx_Buf 
+                                SPI_Read_Buf SPI_RW_Reg 
+_Vector_66                USES testt 
+_Vector_12                USES falling_interrupt 
+_Vector_11                USES rising_interrupt 
+_Vector_10                USES row_interrupt 
+_Vector_9                 USES odd_even_interrupt 
+_Vector_8                 USES field_interrupt 
+_Vector_6                 USES IRQ_ISR 
+PIDInit                   USES MyPID 
+PIDCalculate              USES MyPID CurrentSpeed 
+get_current_speed         USES CSpeedArraySum CSpeedArray _PACNT 
+                                CSpeedArraySum1 
+speed_ctl                 USES get_current_speed CurrentSpeed PIDCalculate 
+                                OutputSpeed num_chang _PWME sum_zhidao num_shizi_chang 
+                                test_a test_b flag_shizi _PT01AD0 _PWMDTY23 
+                                is_startline 
+pto_get_sumblock          USES x find_left_startline find_right_startline 
+                                left_endline left_stratline pto_get_sumblock right_endline 
+                                right_startline mid_error error start_error last_stl 
+                                pleft_endline pright_endline test_c test_d test_sum quan 
+                                sum_Block is_odd p_point_down p_point_up 
+find_edge                 USES find_left_startline find_right_startline 
+                                left_stratline p_point_up big_left right_startline 
+                                p_point_down little_right left_endline right_endline 
+is_will_be_out            USES left_stratline is_will_be_out right_startline 
+                                p_point_down find_left_startline find_right_startline 
+                                left_endline SteerAngle will_be_out_left right_endline 
+                                will_be_out_right pt_left pt_right pangle_left pangle_right 
+                                pt_left_line pt_right_line _BDIVMODU p_point_up 
+pnew_duoji_control        USES xiuzheng_error condition_1 condition_2 
+                                condition_3 condition_4 condition_5 condition_6 
+                                condition_7 condition_8 condition_9 condition_10 
+                                condition_11 condition_12 condition_13 condition_14 
+                                condition_15 condition_16 condition_17 condition_18 
+                                condition_19 condition_20 left_endline right_endline 
+                                pnew_duoji_control error _LSHRS mid_error test_error point_up 
+                                test_left point_down test_right test_a test_b 
+                                left_stratline test_left_stl right_startline test_right_stl 
+                                test_stl_error test_str_error flag_shizi test_flag_shizi 
+                                valium mid_valium pright_endline pleft_endline 
+                                pto_get_sumblock x_error pre_x_error x sum_Block shorter_line 
+                                find_left_startline find_right_startline flag_find_aftershizi 
+                                _LMULS16x32 _LDIVS SteerAngle0 num_pwm aver_pwm _LDIVU 
+                                p_point_down p_point_up is_will_be_out cabs_uchar turn_left 
+                                turn_right p_SteerAngle0 use_ad_con duoji_control 
+                                ee_x_error SteerAngle1 _PWMDTY67 now_pwmdty67 SteerAngle 
+                                _LCMP num_shizi_chang 
+duoji_control             USES left_endline right_endline p_point_up 
+                                p_point_down error mid_error _LSHRS test_error test_left 
+                                test_right test_a test_b left_stratline test_left_stl 
+                                right_startline test_right_stl test_stl_error test_str_error 
+                                flag_shizi test_flag_shizi valium mid_valium shorter_line 
+                                p_SteerAngle0 condition_16 cabs_uchar duoji_control 
+                                condition_17 condition_18 _LMULS16x32 _LDIVS SteerAngle0 
+                                SteerAngle _PWMDTY67 now_pwmdty67 condition_19 
+enstart_duoji             USES _PWME p_SteerAngle0 _PWMDTY67 _PT01AD0 
+                                num_shizi_chang aver_pwm num_pwm _LINC 
+clear_this_field_flag     USES is_odd flag_ed num_find last_stl test_bbhh 
+                                test_aa_rstl test_aa_lstl flag_shizi flag_not_shizi 
+                                End_Line use_ad_con num_shizi will_be_out 
+                                will_be_out_left will_be_out_right find_last_left 
+                                find_last_right Pre_Line_Save is_have_a_lstl is_have_a_rstl 
+                                sum_Block turn_left turn_right left_endline 
+                                right_endline stop_find_right stop_find_left num_wrong_left 
+                                num_wrong_right Flag_Lose_Line left_stratline right_startline 
+                                find_left_startline find_right_startline flag_find_aftershizi 
+                                is_find_a_real_start not_find_a_real_start 
+                                num_onlyfind_one_startline 
+select_speed              USES _PT01AD0 zhidao_speed shizi_speed refer_speed 
+                                limit_speed is_use_start flag_use_special_cutspeed 
+set_speed                 USES _PWMDTY67 PWM angle find_edge num_shizi_chang 
+                                test_a test_b flag_shizi shizi_speed set_speed 
+                                find_left_startline find_right_startline left_stratline point_up 
+                                right_startline point_down little_right big_left num_zhidao 
+                                need_cut_speed sum_cut sum_wandao sum_zhidao zhidao_speed 
+                                CurrentSpeed MyPID CurveSpeed flag_use_special_cutspeed 
+                                left_endline right_endline sum_little_angle StraightSpeed 
+                                test refer_speed limit_speed 
+init_all                  USES PLL_Init ECT0_init ECT_Init PWM_Init PIT_Init 
+                                PIT1_init Dial_Switch_init PIDInit _DDRAB _DDR01AD0 
+                                dian_sha 
+is_shizi                  USES flag_not_shizi is_shizi v_point_up v_point_down 
+                                find_right_startline right_endline point_down find_left_startline 
+                                left_endline point_up num_shizi right_startline flag_shizi 
+                                not_find_a_real_start Pre_Line_Save 
+is_the_startline          USES is_the_startline point_up v_point_up point_down 
+                                v_point_down Pre_Line_Save is_startline1 
+to_find_both_startline_new USES left_block0 find_left find_right 
+                                pfind_left_startline pfind_right_startline right_block0 
+                                to_find_both_startline_new v_point_down v_point_up find_last_rstl 
+                                find_last_lstl find_left_startline find_right_startline 
+                                cabs_uchar Pre_Line_Save to_find_both_startline 
+                                is_have_a_lstl left_stratline is_have_a_rstl right_startline 
+to_find_both_line_new     USES left_block0 find_left find_right right_block0 
+                                Pre_Line_Save to_find_both_line_new v_point_down v_point_up 
+                                point_up cabs_uchar point_down get_path_left 
+                                get_path_right 
+to_find_both_startline    USES left_block0 find_left find_right 
+                                to_find_both_startline v_point_down right_block0 find_right_startline 
+                                find_last_rstl pre_right_stl_error cabs_uchar Pre_Line_Save 
+                                pfind_right_startline v_point_up find_left_startline find_last_lstl 
+                                pre_left_stl_error pfind_left_startline is_have_a_lstl 
+                                left_stratline is_have_a_rstl right_startline 
+to_find_left_startline    USES find_left Pre_Line_Save v_point_up left_block0 
+                                find_left_startline left_stratline 
+to_find_right_startline   USES find_right Pre_Line_Save v_point_down 
+                                right_block0 find_right_startline right_startline 
+get_path_left             USES find_left Pre_Line_Save v_point_up left_block0 
+                                point_up cabs_uchar 
+get_path_right            USES find_right Pre_Line_Save v_point_down 
+                                right_block0 point_down cabs_uchar 
+to_save_thisfield_state   USES find_left_startline find_last_lstl 
+                                find_right_startline find_last_rstl left_stratline pre_left_stl 
+                                right_startline pre_right_stl point_up pre_left_stl_error 
+                                point_down pre_right_stl_error 
+getline_when_shizi        USES find_left find_right Pre_Line_Save v_point_down 
+                                v_point_up right_block0 left_block0 
+to_save_this_hang_state   USES find_left find_last_left find_right 
+                                find_last_right 
+bvbo_when_no_real_start   USES find_left find_right Pre_Line_Save is_shizi 
+                                flag_shizi flag_find_aftershizi getline_when_shizi 
+                                get_path_left get_path_right bvbo_when_no_real_start 
+                                Flag_Lose_Line find_left_startline find_right_startline 
+                                to_find_both_startline v_point_down v_point_up left_stratline 
+                                left_block0 right_startline right_block0 find_last_lstl 
+                                find_last_rstl stop_find_right to_find_right_startline 
+                                stop_find_left point_up to_find_left_startline point_down 
+                                num_wrong_left num_wrong_right p_point_up p_point_down 
+                                pre_left_stl_error cabs_uchar pre_right_stl_error left_endline 
+                                right_endline 
+lvbo                      USES Flag_Lose_Line find_left_startline 
+                                find_right_startline lvbo pfind_right_startline 
+                                pfind_left_startline find_last_lstl find_last_rstl find_left 
+                                is_find_a_real_start stop_find_right to_find_right_startline 
+                                stop_find_left get_path_left left_stratline point_up 
+                                right_block0 to_find_left_startline get_path_right 
+                                left_block0 to_find_both_line_new find_right p_point_down 
+                                Pre_Line_Save left_endline right_endline num_wrong_left 
+                                num_wrong_right p_point_up point_down to_save_this_hang_state 
+                                find_last_left test_aa_lstl find_last_right right_startline 
+                                test_aa_rstl clear_this_field_flag test_bbhh 
+                                not_find_a_real_start v_point_down v_point_up pre_right_stl_error 
+                                cabs_uchar pre_left_stl_error to_find_both_startline_new 
+                                _PWMDTY67 
+car_control_after_a_field USES Pre_Line_Save Line_Save is_startline2 
+                                is_startline1 left_endline right_endline is_startline 
+                                is_startline3 _PWME find_left_startline find_right_startline 
+                                turn_right turn_left to_save_thisfield_state 
+                                pnew_duoji_control enstart_duoji _PWMDTY67 pre_SteerAngle _LCMP 
+                                stright stright_flag set_speed 
+how_to_do_when_shizi      USES flag_find_aftershizi getline_when_shizi 
+                                get_path_left get_path_right find_left Pre_Line_Save 
+                                left_block0 point_up how_to_do_when_shizi left_endline 
+                                find_right p_point_down right_endline right_block0 
+                                num_find find_left_startline find_right_startline 
+                                p_point_up point_down 
+main                      USES init_all _PWMDTY67 Pre_Line_Save num_chang 
+                                _PWME Line_Save select_speed pre_e0 send _TIE 
+                                _PORTAB find_left find_right is_use_start 
+                                is_the_startline is_shizi flag_shizi flag_ed 
+                                how_to_do_when_shizi not_find_a_real_start bvbo_when_no_real_start 
+                                lvbo stop_find_left stop_find_right Flag_Lose_Line 
+                                find_right_startline find_left_startline left_endline 
+                                left_stratline right_endline right_startline 
+                                car_control_after_a_field main 
+Init                      USES _startupData 
+PLL_Init                  USES _CLKSEL _PLLCTL _SYNR _REFDV _POSTDIV _CRGFLG 
+PIT_Init                  USES _PITCFLMT _PITCE _PITMUX _PITMTLD0 _PITLD0 
+                                _PITINTE 
+ECT0_init                 USES _IRQCR _TSCR1 _TSCR2 _TIE _TIOS _TCTL4 _TCTL3 
+                                _TFLG1 
+ECT_Init                  USES _PACTL _PACNT 
+PWM_Init                  USES _PWME _PWMPRCLK _PWMSCLA _PWMSCLB _PWMCAE 
+                                _PWMPOL _PWMCLK _PWMCTL _PWMPER01 _PWMPER23 _PWMPER67 
+                                _PWMDTY01 _PWMDTY23 _PWMDTY67 _DDRP _PTP 
+PIT1_init                 USES _PITCFLMT _PITMUX _PITMTLD1 _PITLD1 _PITCE 
+                                _PITINTE 
+Dial_Switch_init          USES _ATD0DIEN _DDR01AD0 
+SPI_Write_Byte            USES _SPI0SR _SPI0DR 
+SPI_RW_Reg                USES _PTM SPI_Write_Byte 
+SPI_Read_Byte             USES _PTM SPI_Write_Byte 
+SPI_Read_Buf              USES _PTM SPI_Write_Byte 
+
+*********************************************************************************************
+DEPENDENCY TREE
+*********************************************************************************************
+ main and _Startup Group
+ | 
+ +- main                
+ |  | 
+ |  +- init_all            
+ |  |  | 
+ |  |  +- PLL_Init            
+ |  |  |    
+ |  |  +- ECT0_init           
+ |  |  |    
+ |  |  +- ECT_Init            
+ |  |  |    
+ |  |  +- PWM_Init            
+ |  |  |    
+ |  |  +- PIT_Init            
+ |  |  |    
+ |  |  +- PIT1_init           
+ |  |  |    
+ |  |  +- Dial_Switch_init    
+ |  |  |    
+ |  |  +- PIDInit             
+ |  |       
+ |  +- select_speed        
+ |  |    
+ |  +- is_the_startline    
+ |  |    
+ |  +- is_shizi            
+ |  |    
+ |  +- how_to_do_when_shizi
+ |  |  | 
+ |  |  +- getline_when_shizi  
+ |  |  |    
+ |  |  +- get_path_left       
+ |  |  |  | 
+ |  |  |  +- cabs_uchar          
+ |  |  |       
+ |  |  +- get_path_right      
+ |  |     | 
+ |  |     +- cabs_uchar           (see above)
+ |  |        
+ |  +- bvbo_when_no_real_start
+ |  |  | 
+ |  |  +- is_shizi             (see above)
+ |  |  |  
+ |  |  +- getline_when_shizi   (see above)
+ |  |  |  
+ |  |  +- get_path_left        (see above)
+ |  |  |  
+ |  |  +- get_path_right       (see above)
+ |  |  |  
+ |  |  +- to_find_both_startline
+ |  |  |  | 
+ |  |  |  +- cabs_uchar           (see above)
+ |  |  |     
+ |  |  +- to_find_right_startline
+ |  |  |    
+ |  |  +- to_find_left_startline
+ |  |  |    
+ |  |  +- cabs_uchar           (see above)
+ |  |     
+ |  +- lvbo                
+ |  |  | 
+ |  |  +- to_find_right_startline (see above)
+ |  |  |  
+ |  |  +- get_path_left        (see above)
+ |  |  |  
+ |  |  +- to_find_left_startline (see above)
+ |  |  |  
+ |  |  +- get_path_right       (see above)
+ |  |  |  
+ |  |  +- to_find_both_line_new
+ |  |  |  | 
+ |  |  |  +- cabs_uchar           (see above)
+ |  |  |  |  
+ |  |  |  +- get_path_left        (see above)
+ |  |  |  |  
+ |  |  |  +- get_path_right       (see above)
+ |  |  |     
+ |  |  +- to_save_this_hang_state
+ |  |  |    
+ |  |  +- clear_this_field_flag
+ |  |  |    
+ |  |  +- cabs_uchar           (see above)
+ |  |  |  
+ |  |  +- to_find_both_startline_new
+ |  |     | 
+ |  |     +- cabs_uchar           (see above)
+ |  |     |  
+ |  |     +- to_find_both_startline (see above)
+ |  |        
+ |  +- car_control_after_a_field
+ |     | 
+ |     +- to_save_thisfield_state
+ |     |    
+ |     +- pnew_duoji_control  
+ |     |  | 
+ |     |  +- _LSHRS              
+ |     |  |    
+ |     |  +- pto_get_sumblock    
+ |     |  |    
+ |     |  +- _LMULS16x32         
+ |     |  |  | 
+ |     |  |  +- _LNEG               
+ |     |  |       
+ |     |  +- _LDIVS              
+ |     |  |  | 
+ |     |  |  +- _NEG_P              
+ |     |  |  |    
+ |     |  |  +- _lDivMod            
+ |     |  |       
+ |     |  +- _LDIVU              
+ |     |  |  | 
+ |     |  |  +- _lDivMod             (see above)
+ |     |  |     
+ |     |  +- is_will_be_out      
+ |     |  |  | 
+ |     |  |  +- _BDIVMODU           
+ |     |  |       
+ |     |  +- cabs_uchar           (see above)
+ |     |  |  
+ |     |  +- duoji_control       
+ |     |  |  | 
+ |     |  |  +- _LSHRS               (see above)
+ |     |  |  |  
+ |     |  |  +- cabs_uchar           (see above)
+ |     |  |  |  
+ |     |  |  +- _LMULS16x32          (see above)
+ |     |  |  |  
+ |     |  |  +- _LDIVS               (see above)
+ |     |  |     
+ |     |  +- _LCMP               
+ |     |       
+ |     +- enstart_duoji       
+ |     |  | 
+ |     |  +- _LINC               
+ |     |       
+ |     +- _LCMP                (see above)
+ |     |  
+ |     +- set_speed           
+ |        | 
+ |        +- find_edge           
+ |             
+ +- _Startup            
+    | 
+    +- Init                
+    |    
+    +- main                 (see above)
+       
+ _Vector_8           
+ | 
+ +- field_interrupt     
+      
+ _Vector_9           
+ | 
+ +- odd_even_interrupt  
+      
+ _Vector_10          
+ | 
+ +- row_interrupt       
+    | 
+    +- clear_this_field_flag (see above)
+       
+ _Vector_11          
+ | 
+ +- rising_interrupt    
+      
+ _Vector_12          
+ | 
+ +- falling_interrupt   
+      
+ _Vector_66          
+ | 
+ +- testt               
+    | 
+    +- speed_ctl           
+       | 
+       +- get_current_speed   
+       |    
+       +- PIDCalculate        
+            
+ _Vector_6           
+ | 
+ +- IRQ_ISR             
+    | 
+    +- SPI_Read_Byte       
+    |  | 
+    |  +- SPI_Write_Byte      
+    |       
+    +- SPI_Read_Buf        
+    |  | 
+    |  +- SPI_Write_Byte       (see above)
+    |     
+    +- SPI_RW_Reg          
+       | 
+       +- SPI_Write_Byte       (see above)
+          
+*********************************************************************************************
+STATISTIC SECTION
+---------------------------------------------------------------------------------------------
+
+ExeFile:
+--------
+Number of blocks to be downloaded: 12
+Total size of all blocks to be downloaded: 12205
+
